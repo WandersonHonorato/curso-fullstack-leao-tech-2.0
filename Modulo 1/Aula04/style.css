@@ -1,0 +1,41 @@
+body{
+    background-color: azure;
+    border: 5px solid purple;
+}
+
+.header-main{
+    font-family: 'Times New Roman';
+    color: white;
+    background-color: purple;
+    font-size: 60px;
+    text-align: center;
+}
+
+h2{
+    font-family:'Times New Roman';
+    color: purple;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+h3{
+    background-color: blueviolet;
+    font-size: 30px;
+    font-family:'Times New Roman';
+    color: white;
+    text-align: start;
+}
+
+#aside-ingredientes {
+    text-align: left;
+}
+
+p{
+    text-align: justify
+    
+}
+
+span{
+   margin-left: 20px;
+}
