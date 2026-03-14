@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+</head>
+
+<style>
+    .container {
+        height: 500px;
+        border: 2px solid black;
+        display: flex;
+        /* flex-direction: row;
+        flex-direction: colum;
+        flex-direction: colum-reserve;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+        flex-direction: row;
+        /* wrap; nowrap; wrap-reserve */
+        flex-wrap: wrap;
+        /* start; end; center; space-between; space-around; space-evenly */
+        /* start; end, space-between; space-around; space-evenly, strech */
+        align-content: start;
+        align-items: center;
+    }
+
+    div div {
+        margin: 5px;
+    }
+
+    .div1 {
+        background-color: red;
+        width: 100px;
+        height: 100px;
+        order: -1;
+    }
+
+    .div2 {
+        background-color: blue;
+        width: 100px;
+        height: 100px;
+        order: 01;
+    }
+    .div3 {
+        background-color: purple;
+        width: 100px;
+        height: 100px;
+        order: 2;
+    }
+
+    .div4 {
+        background-color: rgb(107, 128, 0);
+        width: 100px;
+        height: 100px;
+        order: -4;
+    }
+    .div5 {
+        background-color: green;
+        width: 100px;
+        height: 100px;
+    }
+
+    
+    
+</style>
+
+
+<body>
+
+    <!-- Quando usar o flex-container, as div dentro dele se torna flex-itens -->
+    <h1>Display Flex</h1>
+
+    <div class="container">
+        <div class="div1">
+            Div1
+        </div>
+        <div class="div2">
+            Div2
+        </div>
+        <div class="div3">
+            Div3
+        </div>
+        <div class="div4">
+            Div3
+        </div>
+        <div class="div5">
+            Div3
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
