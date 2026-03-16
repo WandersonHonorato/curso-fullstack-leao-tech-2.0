@@ -12,7 +12,7 @@
 
     <nav class="menu">
         <a href="#">Início</a>
-        <a href="#">Ingredientes</a>
+        <a href="#ingredientes">Ingredientes</a>
         <a href="#">Preparo</a>
         <a href="#">Dicas</a>
         <a href="#">Contato</a>
@@ -47,7 +47,7 @@
 <section class="info">
 
     <div class="box">
-        <h3>Ingredientes</h3>
+        <h3 id="ingredientes" class="dicas-text" >Ingredientes</h3>
         <ul>
             <li>500g de macarrão</li>
             <li>2 litros de água</li>
@@ -61,7 +61,7 @@
     </div>
 
     <div class="box">
-        <h3>Modo de Preparo</h3>
+        <h3 class="dicas-text" >Modo de Preparo</h3>
         <ol>
             <li>Cozinhe o macarrão conforme a embalagem</li>
             <li>Refogue a cebola e o alho</li>
@@ -77,7 +77,7 @@
 
 <section class="dicas">
 
-    <h3>Dicas do Chef</h3>
+    <h3 class="dicas-text" >Dicas do Chef</h3>
 
     <div class="cards">
 
@@ -108,13 +108,13 @@
 <form>
 
 <label>Nome:</label>
-<input type="text">
+<input type="text" name="name" id="name" placeholder="Digite seu nome" required >
 
 <label>E-mail:</label>
-<input type="email">
+<input type="email" name="e-mail" id="e-mail" placeholder="Wanderson@gmail.com" required >
 
 <label>Sua sugestão:</label>
-<textarea></textarea>
+<textarea rows="5" cols="5" maxlength="50" ></textarea required>
 
 <button type="submit">Enviar</button>
 

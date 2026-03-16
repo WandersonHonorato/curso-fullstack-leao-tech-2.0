@@ -1,7 +1,7 @@
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background:#f4f4f4;
+    background:#c7b4b4;
 }
 
 /* CABEÇALHO */
@@ -57,7 +57,6 @@ main{
     border: 3px solid #7d1f1f;
 }
 
-/* INGREDIENTES E PREPARO */
 
 .info{
     margin-top:20px;
@@ -69,7 +68,7 @@ main{
     flex:1;
     background:white;
     padding:15px;
-    border:1px solid #a56565;
+    border:1px solid #a52a2a;
 }
 
 
@@ -77,6 +76,11 @@ main{
 .dicas{
     margin-top:20px;
     text-align:center;
+}
+
+.dicas-text{
+    color: #733a3a;
+    text-align: center;
 }
 
 .cards{
@@ -87,9 +91,9 @@ main{
 
 .card{
     flex:1;
-    background:white;
+    background:#ad8a8a;
     padding:15px;
-    border:1px solid #ccc;
+    border:1px solid #7d1f1f;
 }
 
 /* FORMULÁRIO */
@@ -98,7 +102,7 @@ main{
     margin-top:20px;
     background:white;
     padding:20px;
-    border:1px solid #ccc;
+    border:2px solid #ccc;
 }
 
 form{
@@ -109,13 +113,13 @@ form{
 input, textarea{
     margin-bottom:10px;
     padding:8px;
-    border:1px solid #ccc;
+    border:1px solid #808080;
 }
 
 button{
     background:#a52a2a;
     color:white;
-    border:none;
-    padding:10px;
+    border: 2px solid #a52a2a;
+    padding: 10px;
     cursor:pointer;
 }
