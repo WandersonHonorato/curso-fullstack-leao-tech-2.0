@@ -1,54 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macarronada Italiana</title>
+    <title>Receita de Macarronada Italiana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Receita de Macarronada Italiana</h1>
-        <div class="div-main-btn">
-           <a href="" ><button class="btn-nav">Início</button></a>
-           <a href=""><button class="btn-nav">Ingredientes</button></a> 
-           <a href=""><button class="btn-nav">Preparo</button></a> 
-          <a href=""><button class="btn-nav">Dicas</button></a>  
-          <a href=""><button class="btn-nav">Contato</button></a>  
+
+<header>
+    <h1>Receita de Macarronada Italiana</h1>
+
+    <nav class="menu">
+        <a href="#">Início</a>
+        <a href="#">Ingredientes</a>
+        <a href="#">Preparo</a>
+        <a href="#">Dicas</a>
+        <a href="#">Contato</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="topo">
+
+    <div class="texto">
+        <h2>Uma receita clássica e deliciosa</h2>
+        <p>
+            A macarronada italiana é uma receita tradicional, saborosa e muito
+            apreciada em todo o mundo. Feita com molho de tomate fresco e
+            temperos naturais, é perfeita para reunir a família à mesa.
+        </p>
+
+        <p>
+            O objetivo desta atividade é praticar HTML e CSS, principalmente
+            o uso do display flex para organizar melhor o conteúdo da página.
+        </p>
+    </div>
+
+    <div class="imagem">
+        <img src="/Modulo 1/Aula06/Desafio06/img/macarronada-italiana.jpg" alt="Macarronada">
+    </div>
+
+</section>
+
+
+<section class="info">
+
+    <div class="box">
+        <h3>Ingredientes</h3>
+        <ul>
+            <li>500g de macarrão</li>
+            <li>2 litros de água</li>
+            <li>2 tomates picados</li>
+            <li>1 cebola</li>
+            <li>2 dentes de alho</li>
+            <li>Molho de tomate</li>
+            <li>Sal a gosto</li>
+            <li>Queijo ralado</li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h3>Modo de Preparo</h3>
+        <ol>
+            <li>Cozinhe o macarrão conforme a embalagem</li>
+            <li>Refogue a cebola e o alho</li>
+            <li>Adicione o molho de tomate</li>
+            <li>Acrescente os temperos</li>
+            <li>Misture com o macarrão</li>
+            <li>Finalize com queijo ralado</li>
+        </ol>
+    </div>
+
+</section>
+
+
+<section class="dicas">
+
+    <h3>Dicas do Chef</h3>
+
+    <div class="cards">
+
+        <div class="card">
+            <h4>Use queijo ralado</h4>
+            <p>O queijo ralado dá um sabor especial e melhora a finalização do prato.</p>
         </div>
-    </header>
 
-    <main>
-        <section>
-        <div class="div-main-section-1">
-            <div class="card1-section-1">
-                <h2>Uma receita clássica</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit ipsa quas consequuntur perferendis, minima nulla maiores voluptatum optio voluptatem, deleniti ullam molestiae eligendi ducimus quidem aspernatur voluptas impedit, itaque temporibus.</p>
-            </div>
-            <div class="card2-section2">
-                <img src="/Modulo 1/Aula06/Desafio06/img/download.jpg" alt="">
-            </div>
+        <div class="card">
+            <h4>Capriche no molho</h4>
+            <p>Um molho bem temperado faz toda diferença no resultado final.</p>
         </div>
-        </section>
 
-        <section>
-            <div class="card1-section-2">
+        <div class="card">
+            <h4>Sirva quente</h4>
+            <p>A macarronada fica muito mais saborosa quando servida logo após o preparo.</p>
+        </div>
 
-            </div>
+    </div>
 
-            <div class="card2-section2">
-
-            </div>
-        </section>
-     
+</section>
 
 
+<section class="formulario">
 
+<h3>Envie sua sugestão</h3>
 
+<form>
 
-    </main>
+<label>Nome:</label>
+<input type="text">
 
+<label>E-mail:</label>
+<input type="email">
 
+<label>Sua sugestão:</label>
+<textarea></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+</section>
+
+</main>
 
 </body>
 </html>
