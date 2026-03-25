@@ -370,10 +370,10 @@
     <div class="container">
       <small class="text-secondary text-uppercase">Chefs</small>
       <h3 class="font-amatic display-4 mb-5">Our <span class="text-red">Professional</span> Chefs</h3>
-      
+
       <div class="row g-4"> 
         <div class="col-md-4">
-          <div class="card border-0 shadow-sm">
+          <div class="card border-0 shadow-md">
             <img src="/Modulo 1/Aula09/Desafio09/img/chefs/chefs-1.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Fogaça</h5>
@@ -403,6 +403,37 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Reserva -->
+  <section class="container py-5">
+    <div class="row g-0 shadow">
+      <div class="col-md-4">
+        <img src="/Modulo 1/Aula09/Desafio09/img/reservation.jpg" class="img-fluid w-75 object-fit-cover"
+          alt="">
+      </div>
+      <div class="col-md-8 p-5 bg-white">
+        <form class="row g-3">
+          <div class="col-md-4">
+            <input type="text" name="name" id="name" class="form-control" placeholder="Seu nome" required></div>
+          <div class="col-md-4">
+            <input type="email" name="email" id="email" class="form-control" placeholder="wanderson@gmail.com" required></div>
+          <div class="col-md-4">
+            <input type="text" name="phone" id="phone" class="form-control" placeholder="99 9 99999999" required></div>
+          <div class="col-md-4">
+            <input type="date" name="date" id="reservation-date" class="form-control" required></div>
+          <div class="col-md-4">
+            <input type="time" name="time" id="reservation-time" class="form-control" required></div>
+          <div class="col-md-4">
+            <input type="number" name="people" id="people" class="form-control" placeholder="Nº de pessoas" min="0" required></div>
+          <div class="col-12">
+            <textarea class="form-control" name="message" id="message" rows="5" placeholder="Messagem" required></textarea></div>
+          <div class="col-12 text-center mt-4">
+            <button type="submit" value="" class="btn-book">Reserve</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
