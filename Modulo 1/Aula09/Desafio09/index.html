@@ -35,6 +35,9 @@
         .font-family {
             font-family: Roboto, sans-serif;
         }
+        .font-amatic {
+            font-family: 'Amatic SC', cursive;
+        }
 
         a {
             text-decoration: none;
@@ -88,7 +91,7 @@
     <section style="height: 150px;" class="container bg-white  border-black mt-2">
         <div class="row text-center p-4">
             <p>About Us</p>
-            <h4 id="About">Learn More <span class="text-danger">About Us</span></h4>
+            <h1 id="About" class="font-amatic" >Learn More <span class="text-danger">About Us</span></h1>
         </div>
     </section>
 
@@ -160,17 +163,17 @@
         </div>
     </article>
 
-    <section style="height: 200px;" class="container-fluid  align-content-center">
+    <section style="height: 230px;" class="container-fluid  align-content-center">
         <div class="row"></div>
-        <div class="col text-center pb-5 mt-2">
+        <div class="col text-center py-4 my-2 ">
             <span>Our Menu</span>
-            <h1 class="text-center">Check Our Yummy Menu</h1>
-        </div>
+            <h1 class="text-center font-amatic mt-2">Check Our <span class="text-danger">Yummy Menu</span></h1>
+        </div>  
 
         <!-- As a link -->
         <nav class="navbar text-center justify-content-center ">
             <nav class="navbar">
-                <div class="container-fluid ">
+\                <div class="container-fluid ">
                     <div class="row text-center d-flex">
                         <div class="col">
                             <a href="">Pesticos</a>
@@ -193,7 +196,7 @@
     <section style="height: 900px;" class="container-fluid bg-white text-center justify-content-cente mt-3">
         <div class="pt-2 mb-1">
             <span class="fw-semibold">MENU</span>
-            <h1><span class="text-danger">Starters</span></h1>
+            <h1><span class="text-danger font-amatic">Starters</span></h1>
         </div>
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -249,15 +252,19 @@
 
     <!-- Seção de Depoimentos-->
  <section>
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+
+  </section>
 
 
+  <section>
     <!-- Secão do Carrossel dos Eventos-->
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
 
-        <div style="height: 600px;" class="card-group">
+        <!-- Slides de Imagens 1 -->
+      <div class="carousel-item active">
+        <div class="card-group">
           <div class="card">
             <img src="img/events-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -285,8 +292,10 @@
           </div>
         </div>
       </div>
+
+      <!-- Slides de Imagens 2 -->
       <div class="carousel-item">
-        <div style="height: 600px;" class="card-group">
+        <div class="card-group">
           <div class="card">
             <img src="img/events-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -313,9 +322,11 @@
           </div>
         </div>
         </div>
+       
 
+        <!-- Slides de Imagens 3 -->
       <div class="carousel-item">
-        <div style="height: 600px;" class="card-group">
+        <div class="card-group">
           <div class="card">
             <img src="img/events-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -342,8 +353,7 @@
           </div>
         </div>
         </div>
-    </div> 
-
+    </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -353,7 +363,49 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+</div> 
 </section>
+
+<section class="bg-light py-5 text-center">
+    <div class="container">
+      <small class="text-secondary text-uppercase">Chefs</small>
+      <h3 class="font-amatic display-4 mb-5">Our <span class="text-red">Professional</span> Chefs</h3>
+      
+      <div class="row g-4"> 
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="/Modulo 1/Aula09/Desafio09/img/chefs/chefs-1.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Fogaça</h5>
+              <span class="text-secondary">Master Chef</span>
+              <p class="card-text mt-2">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae
+                aut.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="/Modulo 1/Aula09/Desafio09/img/chefs/chefs-2.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Paola Carrocelli</h5>
+              <span class="text-secondary">jurado</span>
+              <p class="card-text mt-2">Quo esse repellendus quia id. Est eum et accusantium est voluptas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm">
+            <img src="/Modulo 1/Aula09/Desafio09/img/chefs/chefs-3.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Jaquim</h5>
+              <span class="text-secondary">jurado</span>
+              <p class="card-text mt-2">Vero omnis qoud consequatur. Voluptas nemo aut omnis delectus neque.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
 
