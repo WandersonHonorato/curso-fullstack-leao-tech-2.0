@@ -27,7 +27,7 @@
           background-color: #ce1212;
         }
         .bg-cinza {
-            background-color: var(#e0dede);
+            background-color: #e0dede;
         }
         .font-family {
             font-family: Roboto, sans-serif;
@@ -39,7 +39,7 @@
             text-decoration: none;
             color: #222221;
             padding: 4px;
-            border-bottom: 2px solid red;
+            border-bottom: 2px solid #ce1212;
         }
         h4 {
           margin-top: 10px;
@@ -100,7 +100,16 @@
   </nav>
 </header>
 
-<!-- SECTION PARA CRIAR HEIGHT ENTRE VABVAR E A MAIN-->
+<article>
+<a href="#" 
+   class="btn btn-danger rounded-circle position-fixed bottom-0 end-0 m-4 shadow position-relative z-3"
+   style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;">
+   
+   <i class="bi bi-fork-knife"></i>
+</a>
+</article>
+
+<!-- SECTION PARA CRIAR HEIGHT ENTRE NABVAR E A MAIN-->
 <section style="height: 70px"></section>
 
 <body>
@@ -402,7 +411,7 @@
 
 
    <!-- Secão do Carrossel dos Eventos-->
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleAutoplaying" class="carousel slide z-1" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <!-- iniicio do card -->
@@ -603,27 +612,28 @@
     </div>
   </section>
 
-  <section style="height: 300px;" class="container text-center bg-body-secundary border border-1 border-black">
+  <section style="height: 400px;" class="container text-center bg-body-secundary border border-1 border-black">
     <div class="row">
       <div class="col">
         <p class="text-secondary text-uppercase">GALLERY</p>
         <h1 class=" font-amatic display-4">Check <span class="text-red">Our Gallery</span></h1>
       </div>
     </div>
+  </section>
 
 
-  <footer class="container-fluid bg-dark text-white py-5 ">
+  <footer style=" height: 350px" class="container-fluid bg-dark text-white py-5 ">
     <div class=" text-center">
       <div class="row g-4">
         <div class="col-md-3">
           <i class="bi bi-geo-alt text-red fs-3"></i>
           <h5 class="mt-3">Endereço</h5>
-          <p class="small">Rua dos bobos numero 0</p>
+          <p class="small">Av. Santos Dumont, 2626 </p>
         </div>
         <div class="col-md-3">
           <i class="bi bi-telephone text-red fs-3"></i>
-          <h5 class="mt-3">Reserva</h5>
-          <p class="small">Phone: 2345678 <br>Email:Tanahorademolharobiscoito@ex.com</p>
+          <h5 class="mt-3">Contatos para Reservas</h5>
+          <p class="small"><i class="bi bi-telephone-inbound"></i> 4002 8922 <i class="bi bi-whatsapp"></i> 85 9 92008565 <br><i class="bi bi-envelope"></i> honoratogrill@gmail.com <br> <i class="bi bi-globe2"></i> honoratogrill@site.com.br</p>
         </div>
         <div class="col-md-3">
           <i class="bi bi-clock text-red fs-3"></i>
