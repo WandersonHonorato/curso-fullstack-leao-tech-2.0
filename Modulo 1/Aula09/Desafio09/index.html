@@ -22,28 +22,29 @@
         .text-cinza {
             color: #e0dede;
         }
-
         .text-red{
             color: #ce1212;
-
         }
-
         .bg-cinza {
             background-color: var(#e0dede);
         }
-
         .font-family {
             font-family: Roboto, sans-serif;
         }
         .font-amatic {
             font-family: 'Amatic SC', cursive;
         }
-
         a {
             text-decoration: none;
             color: #222221;
             padding: 4px;
             border-bottom: 2px solid red;
+        }
+        h6 {
+          margin-top: 10px;
+        }
+        p {
+          margin: 0;
         }
     </style>
 
@@ -58,23 +59,23 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0  rounded-3 p-2">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Início</a>
           </li>
            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a class="nav-link active" aria-current="page" href="#">Sobre</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Events</a>
+            <a class="nav-link active" aria-current="page" href="#">Eventos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Chefs</a>
+            <a class="nav-link active" aria-current="page" href="#">Cozinheiros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Gallery</a>
+            <a class="nav-link active" aria-current="page" href="#">Galeria</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Cardápio
+              Meenu
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#Contate-nos">Entrada</a></li>
@@ -185,7 +186,7 @@
         <div class="row"></div>
         <div class="col text-center pt-4 mt-3 ">
             <span class="text-secondary text-uppercase">FEITO A MÃO, COM O CORAÇÃO</span>
-            <h1 class="text-center font-amatic display-4 mt-2">Confira nosso <span class="text-danger">Delicioso Cardápio</span></h1>
+            <h1 class="text-center font-amatic display-4 mt-2">Nosso <span class="text-danger">Delicioso Cardápio</span></h1>
         </div>  
 
         <!-- As a link -->
@@ -220,54 +221,58 @@
     <section style="height: 900px;" class="container-fluid bg-white text-center justify-content-cente mt-3">
       <div>
     <span class="fw-semibold text-secondary text-uppercase">MENU</span>
-    <h1><span class="text-danger display-4 font-amatic">Starters</span></h1>
+    <h1><span class="text-danger display-4 font-amatic">Entradas</span></h1>
     </div>
  
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
 
-        <div class="row d-flex">
-            <div class="card-group">
+        <div class="row d-flex ">
+            <div class="card-group ">
             <div class="col-4 my-3">
-                <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                <h6>Magnam Tiste</h6>
+                <a href=""><img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt=""></a>
+                <h6  class="fw-bold">Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
-                <span class="text-red fw-bold">R$ 25,99</span>
+                <span class="text-red fs-2 fw-bold">R$ 25,99</span>
             </div>
 
             <div class="col-4 my-3">
-                <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                  <h6>Magnam Tiste</h6>
+                <a href=""><img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-2.png" alt=""></a>
+                  <h6 class="fw-bold">Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
-                <span class="text-red fw-bold">R$ 25,99</span>
+                <span class="text-red fs-2 fw-bold">R$ 25,99</span>
             </div>
             <div class="col-4 my-3">
-                <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                <h6>Magnam Tiste</h6>
+                <a href=""><img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-3.png" alt=""></a>
+                <h6  class="fw-bold">Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
-                <span class="text-red fw-bold">R$ 25,99</span>
+                <span class="text-red fs-2 fw-bold">R$ 25,99</span>
             </div>
         </div>
-            <div class="card-group"></div>
 
-    <div class="col-4 my-3">
-                <img class="rounded v-25 w-50 " src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                <h6>Magnam Tiste</h6>
+            <div class="card-group">
+            <div class="col-4 my-3">
+               <a href=""> <img class="rounded v-25 w-50" 
+                src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-4.png" alt=""></a>
+                <h6  class="fw-bold">Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
-                <span class="text-red fw-bold">R$ 25,99</span>
+                <span class="text-red fs-2 fw-bold">R$ 25,99</span>
             </div>
             <div class="col-4 my-3">
-                <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                                <h6>Magnam Tiste</h6>
+               <a  href=""> <img class="rounded v-25 w-50" 
+                src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-5.png" alt=""></a>
+                <h6  class="fw-bold">Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
-                <span class="text-red fw-bold">R$ 25,99</span>
+                <span class="text-red fs-2 fw-bold">R$ 25,99</span>
             </div>
             <div class="col-4 my-3">
-                <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                                <h6>Magnam Tiste</h6>
+                <a  href=""></a><img class="rounded v-25 w-50" 
+                src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-6.png" alt="">
+                <h6  class="fw-bold">Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
-                <span class="text-red fw-bold">R$ 25,99</span>
+                <span class="text-red fs-2 fw-bold">R$ 25,99</span>
+            </div>
             </div>
         </div>
     </section>
@@ -400,7 +405,7 @@
 <section class="bg-light py-5 text-center">
     <div class="container">
       <span class="text-secondary text-uppercase">Chefs</span>
-      <h3 class="font-amatic display-4 mb-5">Our <span class="text-red">Professional</span> Chefs</h3>
+      <h3 class="font-amatic display-4 mb-5">Nossos <span class="text-red">Chefs Profissionais</span></h3>
 
       <div class="row"> 
         <div class="col-md-4">
@@ -418,8 +423,8 @@
           <div class="card border-0 shadow-lg p-2 mb-5">
             <img src="/Modulo 1/Aula09/Desafio09/img/chefs/chefs-2.jpg" class="card-img-top " alt="">
             <div class="card-body">
-              <h5 class="card-title">Paola Carrocelli</h5>
-              <span class="text-secondary">jurado</span>
+              <h5 class="card-title">Ana Maria Braga</h5>
+              <span class="text-secondary">Chef</span>
               <p class="card-text mt-2">Quo esse repellendus quia id. Est eum et accusantium est voluptas.</p>
             </div>
           </div>
@@ -428,8 +433,8 @@
           <div class="card border-0 shadow-lg p-2 mb-5">
             <img src="/Modulo 1/Aula09/Desafio09/img/chefs/chefs-3.jpg" class="card-img-top " alt="">
             <div class="card-body">
-              <h5 class="card-title">Jaquim</h5>
-              <span class="text-secondary">jurado</span>
+              <h5 class="card-title">Érick Jacquin</h5>
+              <span class="text-secondary">Chef</span>
               <p class="card-text mt-2">Vero omnis qoud consequatur. Voluptas nemo aut omnis delectus neque.</p>
             </div>
           </div>
