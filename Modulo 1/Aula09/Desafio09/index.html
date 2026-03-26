@@ -100,10 +100,8 @@
   </nav>
 </header>
 
-<section style="height: 70px">
-
-</section>
-
+<!-- SECTION PARA CRIAR HEIGHT ENTRE VABVAR E A MAIN-->
+<section style="height: 70px"></section>
 
 <body>
     <main style="height: 650px" class="container-fluid bg-body-secondary">
@@ -318,11 +316,90 @@
         </div>
     </section>
 
-    <!-- Seção de Depoimentos-->
- <section style="height: 400px;" class="container bg-sucess">
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
-  </div>
+    <!-- SECTION DOS DEPOIMENTOS E COMENTÁRIOS DOS CLIENTES-->
+      <section class="d-flex justify-content-center py-5">
+    <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
+
+       <!-- O carousel indicators vai fazer o papel do controlar dos button com os depoimentos-->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselDepoimentos" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div style="max-width: 600px;" class="carousel-inner p-4">
+        <h2 class="font-amatic display-4 text-center">depoimentos - <span class="text-danger">Clientes</span></h2>
+
+    <!-- Depoimentos Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row align-items-center">
+            <div class="col-9">
+              <p class="fst-italic">
+                <i class="bi bi-quote text-danger"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elite ipsum dolor sit amet, consectetur adipisci...
+                <i class="bi bi-quote text-danger" style="transform: scaleX(-1); display: inline-block;"></i>
+              </p>
+              <small class="text-secondary text-uppercase">Ronaldinho Gaúcho   <i class="bi bi-star-fill text-warning"></i><i
+                  class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i
+                  class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></small>
+            </div>
+            <div class="col-3">
+              <img class="rounded-circle img-fluid"
+                src="/Modulo 1/Aula09/Desafio09/img/testimonials/ronaldinho-6.png" alt="Cliente 1">
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimentos Slide 2 -->
+        <div class="carousel-item">
+          <div class="row align-items-center">
+            <div class="col-9">
+              <p class="fst-italic">
+                <i class="bi bi-quote text-danger"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elite ipsum dolor sit amet, consectetur adipisci...
+                <i class="bi bi-quote text-danger" style="transform: scaleX(-1); display: inline-block;"></i>
+              </p>
+              <small class="text-secondary text-uppercase">Cristiano Ronaldo   <i class="bi bi-star-fill text-warning"></i><i
+                  class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i
+                  class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></small>
+            </div>
+            <div class="col-3">
+              <img class="rounded-circle img-fluid"
+                src="/Modulo 1/Aula09/Desafio09/img/testimonials/cristiano-7.png" alt="Cliente 2">
+            </div>
+          </div>
+        </div>
+
+        <!-- Depoimentos Slide 3 -->
+        <div class="carousel-item">
+          <div class="row align-items-center">
+            <div class="col-9">
+              <p class="fst-italic">
+                <i class="bi bi-quote text-danger"></i> Lorem ipsum dolor sit amet, consectetur adipiscing elite ipsum dolor sit amet, consectetur adipisci...
+                <i class="bi bi-quote text-danger" style="transform: scaleX(-1); display: inline-block;"></i>
+              </p>
+              <small class="text-secondary text-uppercase">Neymar Jr <i class="bi bi-star-fill text-warning"></i><i
+                  class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i
+                  class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i></small>
+            </div>
+            <div class="col-3">
+              <img class="rounded-circle img-fluid border border-1 border-black"
+                src="/Modulo 1/Aula09/Desafio09/img/testimonials/neymar-9.png" alt="Cliente 3">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselDepoimentos" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </section>
+
 
    <!-- Secão do Carrossel dos Eventos-->
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -331,7 +408,7 @@
         <!-- iniicio do card -->
         <div class="card-group"  data-bs-interval="1000">
           <div class="card">
-            <img src="/Modulo 1/Aula09/Desafio09/img/events-1.jpg" class="card-img-top" alt="...">
+            <img  src="/Modulo 1/Aula09/Desafio09/img/events-1.jpg" class=" rounded-circle img-fluid" alt="...">
             <div class="card-body">
               <h5 class="card-title">Foto 1</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
