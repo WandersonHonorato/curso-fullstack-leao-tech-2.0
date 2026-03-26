@@ -15,9 +15,7 @@
 </head>
 
     <style>
-        .body,
-        header,
-        main {
+        body, header, main {
             margin: 0;
             padding: 0;
         }
@@ -108,10 +106,10 @@
         </div>
     </main>
 
-    <section style="height: 150px;" class="container bg-white  border-black mt-2">
-        <div class="row text-center p-4">
-            <p>About Us</p>
-            <h1 id="About" class="font-amatic" >Learn More <span class="text-danger">About Us</span></h1>
+    <section style="height: 180px;" class="container bg-white border-black pt-4 ">
+        <div class="row text-center  pt-3">
+            <p class="text-secondary text-uppercase">About Us</p>
+            <h1 id="About" class="font-amatic display-4 border border-1 border-black p-2" >Learn More <span class="text-danger">About Us</span></h1>
         </div>
     </section>
 
@@ -163,8 +161,8 @@
         class="container-fluid bg-body-secondary border border-2 border-black d-flex p-3 justify-content-center">
         <div class="row"></div>
         <div class="col-4 border border-2 border-black p-2 m-2">
-            <h2>My Choose Yumyy</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis illo natus</p>
+            <h1>My Choose Yumyy</h1>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis illo natus</span>
         </div>
         <div class="col-2 border border-2 border-black p-2 m-2">
             <h4>Our Services</h4>
@@ -187,7 +185,7 @@
         <div class="row"></div>
         <div class="col text-center py-4 my-2 ">
             <span>Our Menu</span>
-            <h1 class="text-center font-amatic mt-2">Check Our <span class="text-danger">Yummy Menu</span></h1>
+            <h1 class="text-center font-amatic display-4 mt-2">Check Our <span class="text-danger">Yummy Menu</span></h1>
         </div>  
 
         <!-- As a link -->
@@ -214,11 +212,11 @@
     <!-- Opção de Menu -->
 
     <section style="height: 900px;" class="container-fluid bg-white text-center justify-content-cente mt-3">
-        <div class="pt-2 mb-1">
-            <span class="fw-semibold">MENU</span>
-            <h1><span class="text-danger font-amatic">Starters</span></h1>
-        </div>
-
+      <div>
+    <span class="fw-semibold text-secondary text-uppercase">MENU</span>
+    <h1><span class="text-danger display-4 font-amatic">Starters</span></h1>
+    </div>
+ 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -234,13 +232,13 @@
 
             <div class="col-4 my-3">
                 <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                                <h6>Magnam Tiste</h6>
+                  <h6>Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
                 <span class="text-red fw-bold">R$ 25,99</span>
             </div>
             <div class="col-4 my-3">
                 <img class="rounded v-25 w-50" src="/Modulo 1/Aula09/Desafio09/img/menu/menu-item-1.png" alt="">
-                                <h6>Magnam Tiste</h6>
+                <h6>Magnam Tiste</h6>
                 <p>Lorem, deren, trataro, filede, nerada</p>
                 <span class="text-red fw-bold">R$ 25,99</span>
             </div>
@@ -395,7 +393,7 @@
 
 <section class="bg-light py-5 text-center">
     <div class="container">
-      <small class="text-secondary text-uppercase">Chefs</small>
+      <span class="text-secondary text-uppercase">Chefs</span>
       <h3 class="font-amatic display-4 mb-5">Our <span class="text-red">Professional</span> Chefs</h3>
 
       <div class="row g-4"> 
@@ -437,7 +435,7 @@
   <section style="height: 150px;" class="container bg-white  border-black mt-2">
         <div class="row text-center p-4">
             <p>Book a Table</p>
-            <h1 id="About" class="font-amatic" >Book Your <span class="text-danger">Stay With Us</span></h1>
+            <h1 id="About" class="font-amatic display-4" >Book Your <span class="text-danger">Stay With Us</span></h1>
         </div>
   </section>
 
@@ -465,7 +463,11 @@
           <div class="col-12">
             <textarea class="form-control" name="message" id="message" rows="5" placeholder="Messagem" required></textarea></div>
           <div class="col-12 text-center mt-4">
-            <button type="submit" value="" class="btn-book">Reserve</button>
+            <div class="row">
+              <div class="col-12">
+                  <button class="btn btn-danger" type="submit" value="">Reservar</button>
+              </div>
+            </div>
           </div>
         </form>
       </div>
@@ -475,8 +477,8 @@
   <section style="height: 300px;" class="container text-center bg-body-secundary">
     <div class="row">
       <div class="col">
-        <p>GALLERY</p>
-        <h1>Check <span>Our Gallery</span></h1>
+        <p class="text-secondary text-uppercase">GALLERY</p>
+        <h1 class=" font-amatic display-4">Check <span class="text-red">Our Gallery</span></h1>
       </div>
     </div>
 
