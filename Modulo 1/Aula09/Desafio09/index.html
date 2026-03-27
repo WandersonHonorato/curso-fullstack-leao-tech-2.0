@@ -125,7 +125,7 @@
               <a href="https://wa.me/85992606938" target="_blank"><button class="btn btn-danger text-light 
               rounded-pill px-4 mt-3 text-red fw-bold div-hover">Fazer Reserva</button>
             </a>
-            <a href=""><button class="btn text-dark fw-bold text-center mt-2"><i
+            <a href=""><button class="btn text-dark fw-bold text-center pt-1 mt-2"><i
                 class="bi bi-play-circle text-red fs-4 align-middle"></i> Videos</button></a>
             </div>
             <div class="col-6 pt-3 mt-1 ">
@@ -418,13 +418,15 @@
 
 
    <!-- SECTION DO CARROSEL DE FOTOS DOS EVENTOS -->
+
   <div id="carouselExampleAutoplaying" class="carousel slide z-1" data-bs-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <!--Define o time para passar os slides-->
+      <div class="carousel-item active" data-bs-interval="2000">
         <!-- Primeiro card -->
-        <div class="card-group"  data-bs-interval="1000">
+        <div class="card-group">
           <div class="card">
-            <img  src="/Modulo 1/Aula09/Desafio09/img/events-1.jpg" class=" rounded-circle img-fluid" alt="...">
+            <img  src="/Modulo 1/Aula09/Desafio09/img/events-1.jpg" class="card-img-top img-fluid" alt="...">
             <div class="card-body">
               <h5 class="card-title">Foto 1</h5>
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
@@ -454,9 +456,9 @@
         </div>
         <!-- Fim do primeiro Card -->
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-bs-interval="2000">
         <!-- Segundo Card -->
-        <div class="card-group" data-bs-interval="500">
+        <div class="card-group">
           <div class="card">
             <img src="/Modulo 1/Aula09/Desafio09/img/events-2.jpg" class="card-img-top" alt="..." >
             <div class="card-body">
@@ -488,9 +490,9 @@
         </div>
         <!-- fim do card -->
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" data-bs-interval="2000">
         <!-- iniicio do card -->
-        <div class="card-group" data-bs-interval="500">
+        <div class="card-group">
           <div class="card">
             <img src="/Modulo 1/Aula09/Desafio09/img/events-2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -536,6 +538,7 @@
   </div>
 
 <!--SECTION CHEFS-->
+
 <section class="bg-light py-5 text-center">
     <div class="container">
       <span class="text-secondary text-uppercase">Chefs</span>
@@ -619,17 +622,58 @@
     </div>
   </section>
 
-  <section style="height: 400px;" class="container text-center bg-body-secundary border border-1 border-black">
+  <section style="height: 500px;" class="container text-center justify-content-center bg-body-secundary mb-5">
     <div class="row">
       <div class="col">
-        <p class="text-secondary text-uppercase">GALLERY</p>
+        <p class="text-secondary text-uppercase">GALERIA</p>
         <h1 class=" font-amatic display-4">Check <span class="text-red">Our Gallery</span></h1>
       </div>
     </div>
+
+ <div class="row">
+    <div class="col px-5 mx-3">
+     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner ">
+    
+    <div class="carousel-item active" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-1.jpg" class="d-block w-75 div-hover" style="height: 400px; object-fit: cover;"   alt="Galeria de fotos do ambiente">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-2.jpg" class="d-block w-100 div-hover" style="height: 400px; object-fit: cover;"  alt="Galeria de fotos do ambiente">
+    </div>
+    <div class="carousel-item" data-bs-interval="000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-3.jpg" class="id-block w-100 div-hover" style="height: 400px; object-fit: cover;"  alt="Galeria de fotos do ambiente">
+    </div>
+        <div class="carousel-item" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-4.jpg" class="d-block w-100 div-hover" style="height: 400px; object-fit: cover;"  alt="Galeria de fotos do ambiente">
+    </div>
+        <div class="carousel-item" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-5.jpg" class="d-block w-100 div-hover" style="height: 400px; object-fit: cover;"  alt="Galeria de fotos do ambiente">
+    </div>
+      <div class="carousel-item" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-6.jpg" class="d-block w-100 div-hover" style="height: 400px; object-fit: cover;"  alt="Galeria de fotos do ambiente">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-7.jpg" class="d-block w-100 div-hover"  style="height: 400px; object-fit: cover;" alt="Galeria de fotos do ambiente">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-8.jpg" class="d-block w-100 div-hover"  style="height: 400px; object-fit: cover;" alt="Galeria de fotos do ambiente">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  </div>
+  </div>
   </section>
 
-
-  <footer style=" height: 350px" class="container-fluid bg-dark text-white py-5 ">
+   <footer style=" height: 350px" class="container-fluid bg-dark text-white py-5 ">
     <div class=" text-center">
       <div class="row g-4">
         <div class="col-md-3">
