@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width   , initial-scale=1.0">
     <title>Honorato Grill</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="/Modulo 1/bootstrap-5.3.8-dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/Modulo 1/bootstrap-5.3.8-dist/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;700&display=swap"rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -17,6 +17,7 @@
     <style>
         body, header, main {
             padding: 0;
+            margin: 0;
         }
         .text-cinza {
             color: #e0dede;
@@ -85,19 +86,23 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Menu
+              Cardápio
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Entrada</a></li>
               <li><a class="dropdown-item" href="#">Carnes</a></li>
-              <li><a class="dropdown-item" href="#">Pizza</a></li>
+              <li><a class="dropdown-item" href="#">Guarnições</a></li>
+              <li><a class="dropdown-item" href="#">Massas</a></li>
               <li><a class="dropdown-item" href="#">Bebidas</a></li>
-              <li><a class="dropdown-item" href="#">Combos</a></li>
+              <li><a class="dropdown-item" href="#">Sobremesas</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
+    <!-- LINK DO CARRINHO DE COMPRAS E O LINKEDIN-->
+    <a href=""><i class="bi bi-linkedin text-red text-decoration-none w-100 div-hover ms-0 pe-4 fs-2 d-flex"></i></a>
+    <a href=""><i  class="bi bi-cart-check text-red w-100 div-hover m-1 pe-4 fs-2 d-flex"></i></a>
   </nav>
 </header>
 
@@ -134,10 +139,10 @@
         </div>
     </main>
 
-    <section style="height: 180px;" class="container pt-4 ">
+    <section style="height: 170px;" class="container pt-5 ">
         <div class="row text-center  pt-3">
             <p class="text-secondary text-uppercase">Sobre Nós</p>
-            <h1 id="About" class="font-amatic display-4 p-2" >Quem é o <span class="text-danger">Honorato Grill's</span></h1>
+            <h1 id="About" class="font-amatic display-5 p-2" > <span class="text-danger">Honorato Grill's</span></h1>
         </div>
     </section>
 
@@ -155,21 +160,19 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-6 text-center">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                <p class="pb-3 fs-5">
+                    Não oferecemos apenas comidas, mas experiências únicas:
                 </p>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi bi-check2-square"></i> Ullamco laboris nisi ut aliquip</li>
-                    <li class="mb-2"><i class="bi bi-check2-square"></i> Duis aute irure dolor</li>
-                    <li class="mb-2"><i class="bi bi-check2-square"></i> Ullamco laboris nisi ut aliquip</li>
+                    <li class="mb-2"><i class="bi bi-check2-square"></i> Pratos feitos com ingredientes frescos</li>
+                    <li class="mb-2"><i class="bi bi-check2-square"></i> Ambiente confortável e elegante</li>
+                    <li class="mb-2"><i class="bi bi-check2-square"></i> Equipe com atendimeento especializada</li>
                 </ul>
                 <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat...
+                    Nosso restaurante oferece um ambiente aconchegante,<br> moderno e perfeito para momentos especiais.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                    Nesciunt minus accusamus odit ipsam maxime veritatis eius! <br>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequ
+                   Nossa culinária combina ingredientes frescos e selecionados,<br> trazendo sabores incríveis que agradam todos os paladares.
                 </p>
                 <div class=" mt-4">
                     <img src="/Modulo 1/Aula09/Desafio09/img/about-2.jpg"
@@ -179,41 +182,38 @@
         </div>
     </div>
 
-    <!-- CARDS SOBRE VANTAGENS DE COMER NO HONORATO GRILL -->
+    <!-- CARDS SOBRE VALORES, MISSÃO E VISÃO HONORATO GRILL -->
+
   <section id="Lauren" class="bg-body-tertiary py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="bg-red text-white p-5 h-100 rounded shadow-lg p-2 mb-5 div-hover">
-            <h2 class="fw-bold mb-4">Proprietário Honorato Grill's?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Duis aute irure dolor in reprehenderit.</p>
-            <button class="btn btn-light d-flex rounded-pill px-4 mt-3 text-red fw-bold div-hover">Saiba Mais</button>
+            <h2 class="fw-bold mb-4">Proprietário Honorato Grill's</h2>
+            <p>Wanderson Honorato Araujo, 27 anos, excelente filho, muito bem casado e servo de um Deus maravilhoso. <span>Desenvolvedor Fullstack (Java/Spring/React.JS/Angular.JS), cursando o 6° semestre de Engenharia de Software</span>, meu objetivo é trazer soluções através de tecnologias de ponta foco em escalabilidade.</p>
+            <a href="https://www.linkedin.com/in/wanderson-honorato/" target="_blank" class="text-decoration-none"><button class="btn btn-light d-flex rounded-pill px-4 mt-3 text-red fw-bold div-hover">Saiba Mais</button></a>
           </div>
         </div>
         <div class="col-md-8 row text-center">
           <div class="col-md-4">
             <div class="bg-white p-4 h-100 shadow-lg pb-2 mb-5 div-hover">
               <i class="bi bi-clipboard-data fs-1 text-red"></i>
-              <h5 class="mt-3">Corporis voluptates</h5>
-              <p class="small text-secondary">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi
-                ut aliquip</p>
+              <h5 class="mt-3">Missão</h5>
+              <p class="small text-secondary pt-2">Preservar o legado da família Honorato, oferecendo uma experiência gastronômica excepcional que une tradição e inovação e muito amor em cada refeição</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="bg-white p-4 h-100 shadow-lg pb-2 mb-5 div-hover">
               <i class="bi bi-gem fs-1 text-red"></i>
-              <h5 class="mt-3">Ullamco laboris</h5>
-              <p class="small text-secondary">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt</p>
+              <h5 class="mt-3">Valores</h5>
+              <p class="small text-secondary  pt-1">Encantar gerações, celebrar a tradição, cultivar elegância e carinho – Porque no Honorato Grill's, acreditamos que cada refeição é uma oportunidade de tocar almas, de manter viva a essência de quem somos, e de transformar o simples em extraordinário, com o mesmo carinho e sofisticação que nos acompanham desde o início.</p>
             </div>
           </div>
           <div class="col-md-4">
             <div class="bg-white p-4 h-100 shadow-lg pb-2 mb-5 div-hover">
               <i class="bi bi-inboxes fs-1 text-red"></i>
-              <h5 class="mt-3">Labore consequatur</h5>
-              <p class="small text-secondary">Aut suscipit aut cum nemo deleniti aut omnis. Quia eveniet aut et sed
-                accusamus.</p>
+              <h5 class="mt-3">Visão</h5>
+              <p class="small text-secondary pt-2">Encantar gerações com uma experiência gastronômica que celebra a tradição e o carinho, mantendo viva a essência e a elegância dos ensinamentos da Dona Célia Honorato em cada detalhe.</p>
             </div>
           </div>
         </div>
@@ -221,25 +221,14 @@
     </div>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- OVERFLOW e Object-fit-->
+    <!-- OVERFLOW e OBJECT-FIT-->
+     
     <article style="height: 300px; overflow: hidden; object-fit: cover;" class="container-fluid d-flex justify-content-center">
         <div>
             <img src="img/stats-bg.jpg" class=".img-fluid div-hover" alt="">
         </div>
     </article>
+
 
     <section style="height: 230px;" class="container align-content-center">
         <div class="row"></div>
@@ -249,6 +238,7 @@
         </div>  
 
         <!-- MENU DO CARDÁPIO -->
+
         <nav class="navbar text-center justify-content-center ">
             <nav class="navbar">
 \                <div class="container-fluid ">
@@ -333,7 +323,7 @@
     </section>
 
     <!-- SECTION DOS DEPOIMENTOS E COMENTÁRIOS DOS CLIENTES-->
-      <section class="d-flex justify-content-center py-5">
+      <section class="d-flex justify-content-center py-4">
     <div id="carouselDepoimentos" class="carousel slide" data-bs-ride="carousel">
 
        <!-- O carousel indicators vai fazer o papel do controlar dos button com slides dos depoimentos-->
@@ -582,16 +572,16 @@
 
   <section style="height: 150px;" class="container bg-white  border-black mt-2">
         <div class="row text-center p-4">
-            <p class="text-secondary">Book a Table</p>
-            <h1 id="About" class="font-amatic display-4" >Book Your <span class="text-danger">Stay With Us</span></h1>
+            <p class="text-secondary">RESERVAS</p>
+            <h1 id="About" class="font-amatic display-4" >Reserve <span class="text-danger">Seu Momento Conosco</span></h1>
         </div>
   </section>
 
   <!-- Seção de Reserva -->
-  <section class="container py-5">
+  <section class="container py-4">
     <div class="row g-0 shadow">
       <div class="col-md-4">
-        <img src="/Modulo 1/Aula09/Desafio09/img/reservation.jpg" class="img-fluid w-75 object-fit-cover"
+        <img src="/Modulo 1/Aula09/Desafio09/img/reservation.jpg"  class="img-fluid w-75 object-fit-cover div-hover"
           alt="">
       </div>
       <div class="col-md-8 p-5 bg-white">
@@ -622,7 +612,7 @@
     </div>
   </section>
 
-  <section style="height: 500px;" class="container text-center justify-content-center bg-body-secundary mb-5">
+  <section style="height: 550px;" class="container text-center justify-content-center bg-body-secundary my-4">
     <div class="row">
       <div class="col">
         <p class="text-secondary text-uppercase">GALERIA</p>
@@ -631,12 +621,12 @@
     </div>
 
  <div class="row">
-    <div class="col px-5 mx-3">
+    <div class="col px-5 mt-4 mx-3">
      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner ">
     
     <div class="carousel-item active" data-bs-interval="2000">
-      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-1.jpg" class="d-block w-75 div-hover" style="height: 400px; object-fit: cover;"   alt="Galeria de fotos do ambiente">
+      <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-1.jpg" class="d-block w-100 div-hover" style="height: 400px; object-fit: cover;"   alt="Galeria de fotos do ambiente">
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="/Modulo 1/Aula09/Desafio09/img/gallery/gallery-2.jpg" class="d-block w-100 div-hover" style="height: 400px; object-fit: cover;"  alt="Galeria de fotos do ambiente">
@@ -673,7 +663,7 @@
   </div>
   </section>
 
-   <footer style=" height: 350px" class="container-fluid bg-dark text-white py-5 ">
+   <footer style=" height: 350px" class="container-fluid bg-dark text-white mt-4 py-5 ">
     <div class=" text-center">
       <div class="row g-4">
         <div class="col-md-3">
@@ -702,8 +692,7 @@
         </div>
       </div>
       <hr class="my-5 border-secondary">
-      <p class="small text-secondary mb-0">&copy; Direitos reservados de <strong>Lucas Mendes</strong>. Se pegar, PF na
-        sua casa</p>
+      <p class="small text-secondary mb-0">&copy; Todos os Direitos Reservados <strong>Wandeson Honorato Araujo</strong>.</p>
     </div>
   </footer>
 
