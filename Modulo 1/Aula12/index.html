@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 12 - Operadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <script>
+        console.log('Operadores Aritiméticos')
+        let x = 10
+        let y = 5
+
+        console.log('Soma = ${x + y}')
+        console.log('Soma = ${x - y}')
+        console.log('Soma = ${x * y}')
+        console.log('Soma = ${x / y}')
+
+        console.log('Resto da divisão = ${x % y}')
+        console.log('Valor aanerior de x = ${x}')
+        x++
+        console.log('Incremento de x = ${x}')
+        console.log('Valor anterior de y = $(y)')
+        y--
+        console.log('decremento de y = $(y)')
+
+        // x = prompt('Digite um número')
+        // x = prompt('Digite um número')
+        // x = parseInt(x)
+        // console.log(typeof x)
+
+
+    /*1. Crie um programa que peça para o usuário digitar o seu peso sua altura. O cronograma deve calcular o IMC do usuário IMC = peso/altura². Depois de mostrar o IMc, classfique em qual situação a pessoa se encontra de acordo com a seguinte tabela: 
+    abaixo de 18,5 -> Abaixo do peso
+    de 18,5 até 25 -> Peso normal
+    de 25 até 30 -> Sobrepeso
+    de 30 ou mais -> Obesidade */
+
+        let peso = prompt('Digite o seu pego (Kg)')
+        let altura = prompt('Digite a sua altura (Ex: 1.68)')
+        peso = parseFloat(peso)
+        altura = parseFloat(altura)
+
+        let imc
+
+        imc = peso / (altura * altura)
+
+        console.log(`Seu IMC é: ${imc}`)
+
+
+        if (imc < 18.5){
+            console.log(`Você é Olívia Palito`)
+        } else if (imc <= 25 ) {
+            console.log(`Você é um normal`)
+        } else if (imc <= 30){ 
+            console.log(`Você ta gordin`)
+        } else if (imc > 30) {
+            console.log(`Você tá gordão`)
+        }
+
+    
+
+    /*2. Peça para o usuário digitar 3 notas, calcule a média das notas e mostre na tela*/
+
+        let nota1 = prompt("Digite a primeira nota")
+        let nota2 = prompt("Digite a segunda nota")
+        let nota3 = prompt("Digite a terceira nota")
+        nota1 = parseInt(nota1)
+        nota2 = parseInt(nota2)
+        nota3 = parseInt(nota3)
+
+        let media
+
+        media = (nota1 + nota2 + nota3) / 3
+
+        console.log(`Sua média é: ${media}`)
+
+        if (media < 4){
+            console.log(`REPROVADO`)
+        } else if (media >= 7 ){
+            console.log(`RECUPERAÇÃO`)
+        } else if (media <= 10) {
+            console.log(`APROVADO`)
+        }
+
+
+    /*3. Crie um programa que peça ao usuário uma porcentagem de desconto. Depois peça o preço do produto, depois mostre o valor antes do desconto, o valor do desconto e o preço final do produto*/
+        
+        // let porcentagem = prompt('Digite uma % de desconto (5%, 10%, 20%, etc.)')
+        // let preço = prompt("Digite o preço do produto")
+        // porcentagem = parseFloat(porcentagem)
+        // preço = parseFloat(preço)
+
+        // let valorDesconto 
+        // let valorFinal 
+
+        // valorDesconto = preço * (porcentagem / 100)
+        // valorFinal = preço - preço * (porcentagem / 100)
+
+        // if (porcentagem)
+
+        // console.log(`Preço antes do desconto: ${preço}. Valor do desconto ${valorDesconto}. Valor Final com o desconto ${valorFinal}`)
+
+
+        // OPERADORES DE COMPARAÇÃO
+
+        // Igual
+        console.log(x == y)
+        // Igual o valor e o tipo       
+        console.log(x === y)
+        // Diferente
+        console.log(x != y)
+        // Maior que
+        console.log(x > y)
+        // Menor que
+         console.log(x < y)
+        // Maior ou igual
+        console.log(x >= y)
+        // Menor ou igual
+        console.log(x <= y)
+
+        
+
+
+
+        
+
+
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
