@@ -1,0 +1,171 @@
+       <!DOCTYPE html>
+       <html lang="pt-br">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 13</title>
+
+        
+        <script>
+        // IF else if e else
+        // Peça para o usuário classificar sua idade, se a idade for menor que 12 classifique cmo criança, se for entre 12 e 18 como adolescente, de 18 a 60 adulto, maior que 60, idoso.
+
+        // let year = prompt("Digite sua idade")
+        // idade = parseInt(idade)
+
+        // if(idade <= 12){
+        //     console.log(`Classificação: Criança`)
+        // } else if(idade > 18 ){
+        //     console.log(`Classificação: Adolescente`)
+        // } else if(idade < 60){
+        //     console.log(`Classificação: adulto`)
+        // } else{
+        //     console.log(`Classificação: Idoso`)
+        // }
+
+
+        // e = and
+        // Faça um programa em js que valide se uma pessoa pode dirigir, para isso ela precisa ter idade maior que 18 anos e ter carteira de motorista.
+
+        // let idade = parseInt(prompt('Digite sua idade'))
+        // let carteira = confirm('Tem carteira de motorista?')
+
+        // console.log(idade, carteira)
+
+
+        // // || = ou
+
+        // let profissao = prompt('Digite a profissão')
+
+        // if (profissao == 'estudante' || profissao == 'professor'){
+        //     console.log(`Você ganhou desconto`)
+        // } else{
+        //     console.log(`Você não ganhou desconto`)}
+    
+
+   
+    
+        // ATIVIDADES
+
+        // 1. Verificcação de acesso ao cienma
+        // Crie um programa que receba a idade e se a pessoa tem ingresso.
+        // ELa só pode entrar se a idade for maior que 16 anos e tiver ingresso.
+
+        // let year = parseInt(prompt('Digite sua idade'))
+        // let pass = confirm('Tem ingresso?')
+
+
+        // if (year > 16 || pass == true ) {
+        //     console.log(`Você é maior de idade e tem o ingresso`)
+        // } else {
+        //     console.log(`Você não tem premissão para entrar`)
+        // }
+
+
+        // 2. Validação de Login
+        // Crie um programa que peça o nome do usuário e a senha, se o nome de usuário for 'admin' e a senha for 'admin123' diga que ele conseguiu logar, se ela errar um das duas diga '404 not found'
+
+        // let user = prompt('Digite o seu usário')
+        // let password = prompt('Digite sua senha')
+
+        // if (user === "admin" && password === "admin123"){
+        //     console.log(`Login efetuado com sucesso (200)`)
+        // } else {
+        //     console.log(`Usuário e senha incorretas (404 Not Found)`)
+        // }
+
+
+        // 3. Frete gratis
+        // Crie uma programa que receba o valor de uma compra e se o cliente é VIP, O cliente ganhará frete gratis e se compra for mais de 1000 e se for VIP
+
+        // let value
+        // let client
+
+        // value = parseFloat(prompt('Digite o valor total da sua compra'))
+        // client = prompt('Você é um cliente VIP ou FREE?')
+
+        // if (value >= 1000 && client === "VIP" || client === "vip"){
+        //     console.log(`COngratulations, você comprou acima de R$ 1000,00 e ganhou frete grátis`)
+        // } else {
+        //     console.log(`Compra realizada, mas você vai pagar FRETE`)
+        // }
+        
+        // 4. Bloqueio de Acesso
+        // Crie um programa que receba se o usuário digitou senha correta. Se a senha não estiver correta, mostrar "Acesso negado".
+
+        // let user = prompt('Digite o seu usário')
+        // let password = prompt('Digite sua senha')
+
+        // if (user === "Andin" && password === "andin123"){
+        //     console.log(`Login efetuado com sucesso (200)`)
+        // } else {
+        //     console.log(`ACESSO NEGADO (404 Not Found)`)
+        // }
+        
+        // 5. Entrada em festa
+        // Receba idade e se tem convite.
+        // Se menor de 16 → “Entrada proibida”
+        // Se ≥ 16 e não tem convite → “Precisa de convite”
+        // Se ≥ 16 e tem convite → “Entrada liberada”
+
+        // let idade = parseInt(prompt('Digite sua idade'))
+        // let convite = confirm('Tem convite?')
+
+        // if (idade < 16) {
+        //     console.log(`Entrada Proibida, você é menor de idade, vou chamar o Conselho Tutelar`)
+        // } else if (idade >= 16 && convite === false) {
+        //     console.log(`Você não tem permissão para entrar, falta o seu convite`)
+        // } else if (idade >= 16 && convite === true) {
+        //     console.log(`Entrada Liberada, aproveite a festa!`)
+        // }
+
+        // 6. Compra com desconto especial:
+        // Receba valor da compra, se é VIP e se tem cupom.
+        // Se valor ≥ 100
+        // Dentro disso: ganha desconto se for VIP ou tiver cupom
+        // Senão: sem desconto
+
+   
+        // let valor = parseFloat(prompt('Digite o valor total da sua compra'))
+        // let cupom = confirm('Você tem CUPOM?')
+        // let vip = confirm('Você é um cliente VIP?')
+
+        // if (valor >= 100 && vip === true || cupom === true){
+        //     console.log(`Congratulations, você GANHOU 20% DE UM DESCONTO`)
+        // } else {
+        //     console.log(`Compra realizada, mas você NÃO GANHOU DESCONTO`)
+        // }
+
+        //7.Liberação de empréstimo
+        // Receba salário, score e se é cliente antigo.
+        // Se salário ≥ 2000
+        // Dentro disso: aprova se score ≥ 700 ou (score ≥ 500 e cliente antigo)
+        // Senão: empréstimo negado 
+
+        let salario = parseFloat(prompt('Qual o seu salário líquido'))
+        let score = parseInt(prompt('Qual o seu score?'))
+        let client = confirm('Você é cliente antigo?')
+
+        if (salario >= 2000 && score >= 700 || (score >= 500 && client === true)){
+            console.log(`Emprestimo aprovado, mas não gaste no TIGRINHO`)
+        } else {
+            console.log('Empréstimo negado!')
+        }
+
+
+
+
+</script>
+
+
+
+       </head>
+       <body>
+        
+       </body>
+       </html>
+        
+        
+        
+        
+        
