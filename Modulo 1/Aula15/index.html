@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+<script>
+
+// Arrays
+
+let nomes = ['João', 'Maria', 'Pedro', 'Letícia', 'Jéssica', 'Carlos']
+console.log(nomes.indexOf(`Letícia`))
+
+console.log(nomes[2])
+
+nomes[1] = 'Davi'
+
+// adcionar elementos no final do array
+nomes.push('Chico')
+
+// adcionar elementos no início do array
+nomes.unshift('Joana')
+
+//remover um elemento no final
+nomes.pop()
+
+//remover um elemento do começo do array
+nomes.shift()
+
+//adcionar ou remover elementos de uma posição ao lado direito da que eu selecionei especifica do Array
+nome.splice(6,3)
+
+console.log(nomes)
+
+nomes.splice(4,0,'Gabriel','Gabriela')
+
+
+
+let tamanho = nomes.length
+
+for(i=0; i < tamanho; i++){
+    console.log(`Seja bem vindo ${nomes[i]}`)
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
