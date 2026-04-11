@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16</title>
+
+    <script>
+        // Um sistema pede ao usuário o preço de 5 produtos. Armazene os valos em um array, e depois percorra o array e mostre a soma dos preços dos produtos, o produto mais caro e o produto mais barato.
+        
+//         let precos = []
+//         let preço = null
+
+//         for(let i=0; i<5; i++){
+//             preco = Number(prompt(`Digite o preço dos produtos ${i+1}`))
+//                 precos.push(preço)
+//             }
+//         console.log(precos);
+
+//          let soma = 0
+
+//          for (let i=0; i<5; i++){
+//             soma += precos[i]
+//          }
+//          console.log(soma)
+
+
+//         console.log(precos)
+
+//         num = [5, 2, 7, 10, 8]
+//         let min = preco[0]
+//         let max = preco[0]
+
+//         for(let i=0; i<5; i++){
+//             if (min > preco[i]){
+//                 min = preco[i]
+//             }
+//            if(max<num[i]){
+//             max =num[i]
+//            }
+//         } 
+//     console.log(`A soma é $(soma)/nO menor precço é ${min}/nO maior preço é ${max}`)
+
+
+//     // Crie um sistema para cadastrar uma lista de convidados, o usuario terá duas opções, cadastrar convidado e sair. Depois de cadastrar todos os convidados, crie uma programa que peça para o suuário digitar por seu nome e veja se ele está na lista de convidados, se tiver dê boas vindas, se não tiver diga que não foi convidado
+
+
+
+// console.log('Bem vindo ao sistema de cadastro de convidados')
+// console.log('Digite "cadastrar" para cadastrar um convidado')
+// console.log('Digite "entrar" para verificar se está na lista de convidados')    
+
+
+//     let listaConvidados = [];
+//     let convidado = null;
+//     let opcao = null;
+
+//     console.log('Bem vindo ao sistema de cadastro de convidados');
+
+//     while (opcao !== 'sair') {
+//         opcao = prompt('Digite: "cadastrar", "entrar" ou "sair"');
+//         switch (opcao) {
+//             case 'cadastrar':
+//                 convidado = prompt('Digite o seu nome para o convite:');
+//                 listaConvidados.push(convidado);
+//                 console.log(`${convidado} adicionado com sucesso!`);
+//                 break;
+//             case 'entrar':
+//                 convidado = prompt('Digite o seu nome para verificar:');
+//                 if (listaConvidados.includes(convidado)) {
+//                     console.log(`Bem vindo, ${convidado}!`);
+//                 } else {
+//                     console.log('Desculpe, você não está na lista.');
+//                 }
+//                 break;
+//             case 'sair':
+//                 console.log('Saindo do sistema...');
+//                 break;
+//             default:
+//                 console.log('Opção inválida, tente novamente.');
+//                 break;
+//         }
+//     }
+
+
+
+    
+//     // Objetos no Javascript
+
+//     let carro = {
+//         marca:'BYD',
+//         modelo:'King',
+//         cor:'Branco',
+//         ano:'2025',
+//         opcionais: ['Ar condicionado', 'Vidro elétrico', 'Freios ABS']
+//     }
+
+//     console.log(`Marca: ${carro.marca}`)
+//     console.log(`Opcionais: ${carro.opcionais[1]}`)
+
+//     // Criar uma nova propriedade 
+//     carro.hidrido = false
+//     //Modificar uma propriedade
+//     carro.ano = 2026
+//     // Deletar uma propriedade
+//     delete carro.hidrido
+//     console.log(carro)
+
+//     // Obter as chaves de um objeto
+//     let chavesCarro = Object.keys(carro)
+//     console.log(chavesCarro)
+
+//     // //
+
+
+//     // let pessoa = {}
+       
+//     // pessoa.nome = prompt('Digite o seu nome:')
+//     // pessoa.cpf = Number(prompt('Digite o seu CPF:'))
+//     // pessoa.cidade = prompt('Digite a sua cidade:')
+//     // pessoa.idade = Number(prompt('Digite a sua idade:'))
+
+//     // console.log('Estrutura do carro') 
+
+//     for( let chave in carro){
+//         console.log(`${chave}: ${carro[chave]}`)
+//     }
+
+//     let pessoas = []
+
+//     pessoa1 = {
+//         nome: 'Maria',
+//         idade: 30,
+//         cidade: 'New York',
+//         cpf: '12345678900'
+//     }
+
+//     pessoa2 = {
+//         nome: 'João',
+//         idade: 25,
+//         cidade: 'São Paulo',
+//         cpf: '98765432100'
+//     }       
+
+//     pessoa3 = {
+//         nome: 'Ana',
+//         idade: 28,
+//         cidade: 'Rio de Janeiro',
+//         cpf: '45678912300'
+//     }
+
+//     pessoas.push(pessoa1, pessoa2, pessoa3)
+//     //Mostrat os nomes das pessoas cadastradas
+    
+//     for(let i=0; i<pessoas.length; i++){
+//         console.log(pessoas[i].nome)
+//     }
+
+
+// // 1. Cadastro de produto
+// // Crie um programa que peça via prompt:
+// // nome do produto
+// // preço
+// // quantidade em estoque
+
+// let produtos = {}
+
+// produtos.nome = prompt('Digite o nome do produto:')
+// produtos.preco = Number(prompt('Digite o preço do produto:'))   
+// produtos.quantidade = Number(prompt('Digite a quantidade em estoque:'))
+
+// produtos.push(produtos)
+
+
+// ATIVIDADE
+
+
+// 1. Cadastro de produto
+// Crie um programa que peça via prompt:
+// nome do produto
+// preço
+// quantidade em estoque
+// Depois monte um objeto chamado produto com essas informações e exiba:
+// nome
+// valor total em estoque (preço × quantidade)
+
+let produtos = {}
+
+produtos.nome = prompt('Digite o nome do produto:')
+produtos.preco = Number(prompt('Digite o preço do produto:'))
+produtos.quantidade = Number(prompt('Digite a quantidade em estoque:'))
+
+console.log(`O nome do produto é ${produtos.nome} e o valor total em estoque é R$${produtos.preco * produtos.quantidade}.`)
+
+
+// 2. Cadastro de aluno
+// Peça via prompt:
+// nome do aluno
+// nota 1
+// nota 2
+// Monte um objeto aluno com essas informações.
+// Calcule a média e mostre:
+
+// “Aprovado” se média >= 7
+// “Recuperação” se média >= 5 e < 7
+// “Reprovado” se média < 5
+
+let aluno = {}
+
+aluno.nome = prompt
+
+
+
+// 3. Controle de funcionário
+// Peça:
+// nome
+// cargo
+// salário
+// quantidade de faltas
+
+// Crie um objeto funcionário.
+// Se tiver mais de 3 faltas, mostre que o funcionário perdeu o bônus.
+// Caso contrário, mostre que receberá bônus de 10% sobre o salário.
+
+
+// let nome = prompt('Digite o nome do funcionário:')
+// let cargo = prompt('Digite o cargo do funcionário:')   
+// let salario = parseFloat(prompt('Digite o salário do funcionário:'))
+// let faltas = parseInt(prompt('Digite a quantidade de faltas do funcionário:'))  
+
+// let funcionario = {
+//     nome,
+//     cargo,
+//     salario,        
+//     faltas
+// }
+
+// if(funcionario.faltas > 3){
+//     console.log('O funcionário perdeu o bônus, volte uma casa.')
+// } else {
+//     console.log(`O funcionário receberá um bônus de R$${funcionario.salario*1.1}.`)
+// }
+
+// console.log(funcionario)
+
+
+// 4. Pedido de lanchonete
+// Crie um objeto pedido com:
+// nome do cliente
+// nome do lanche
+// quantidade
+// preço unitário
+
+// Calcule o total do pedido.
+// Se o total for maior que 30, aplique 5% de desconto.
+// Mostre o resumo final do pedido.
+
+// 5. Cadastro de carro
+// Peça:
+// marca
+// modelo
+// ano
+// valor
+
+// Crie um objeto carro.
+// Verifique:
+
+// se o carro tem menos de 10 anos, mostre “Seminovo”
+// senão, mostre “Usado”
+
+// Depois exiba todos os dados do objeto.
+
+// 6. Lista de produtos
+// Crie manualmente um array de objetos chamado produtos com pelo menos 4 produtos.
+// Cada produto deve ter:
+// nome
+// preço
+// estoque
+
+// Faça um for para mostrar apenas os produtos com estoque maior que 0.
+
+// 7. Sistema de estoque
+// Usando um array de objetos produtos, percorra a lista e:
+// exiba o nome dos produtos com estoque baixo (menor que 5)
+// exiba o valor total de cada item em estoque (preço × estoque)
+
+produtos = []
+
+let produto1 = {
+    nome: 'Coca-cola',
+    preco: 5.00,
+    estoque: 10
+}
+
+let produto2 = {
+    nome: 'Pizza',
+    preco: 30.00,
+    estoque: 0
+}  
+
+let produto3 = {
+    nome: 'Hamburguer',
+    preco: 15.00,
+    estoque: 3
+}
+
+produtos.push(produto1, produto2, produto3)
+
+for(let i=0; i<produtos.length; i++){
+    if(produtos[i].estoque < 5){
+        console.log(produtos[i].nome)
+    }
+}
+
+for(let i=0; i<produtos.length; i++){
+    console.log(`O valor total de ${produtos[i].nome} em estoque é R$${produtos[i].preco * produtos[i].estoque}.`)
+}
+
+
+
+// 8. Catálogo de alunos
+// Crie um array de objetos alunos com:
+// nome
+// nota
+// curso
+// Percorra com for e mostre:
+
+// os alunos aprovados
+// os alunos reprovados
+
+// Depois conte quantos foram aprovados e quantos foram reprovados.
+
+
+// 9. Controle de vendas
+// Crie um array de objetos vendas com:
+// cliente
+// produto
+// quantidade
+// precoUnitario
+
+// Percorra o array e calcule:
+
+// total de cada venda
+// valor total de todas as vendas somadas
+
+// Se uma venda passar de 100 reais, exiba “Venda alta”.
+
+// 10. Sistema de login simples
+// Crie um objeto usuário com:
+// login
+// senha
+// tipo
+
+// Peça via prompt login e senha.
+// Use if e else para verificar se os dados batem.
+// Se estiver correto:
+
+// se o tipo for “admin”, mostre “Acesso total”
+// senão, mostre “Acesso limitado”
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
