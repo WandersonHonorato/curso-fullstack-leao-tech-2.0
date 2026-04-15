@@ -7,65 +7,64 @@
 
     <script>
 
-//         Utilize o if ternário para resolver as seguintes questões:
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////     IF TERNÁRIO     /////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////
+
+//   Utilize o if ternário para resolver as seguintes questões:
 
 // 1. Verifique se o usuário do sistema é maior de idade ou não
 
-let idade = Number(prompt("Digite sua idade:"));
+let idade = Number(prompt(`Digite sua idade:`));
+let status = idade >= 18 ? `Maior de idade` : `Menor de idade`;
 
-if (idade >= 18) {
-    console.log(`Você tem ${idade} anos. Maior de idade.`);
-} else {
-    console.log(`Você tem ${idade} anos. Menor de idade.`);
-}
+console.log(`Você tem ${idade} anos, então você é: ${status}.`);
 
 
 // 2. Peça ao usuário um número e verifique se ele é ímpar ou par
 
-let numero = Number(prompt("Digite um número:"));
+let numero = Number(prompt(`Digite um número:`));
+let tipo = (numero % 2 === 0) ? `par` : `ímpar`;
 
-if (numero % 2 === 0) {
-    console.log(`O número ${numero} é par.`);
-} else {
-    console.log(`O número ${numero} é ímpar.`);
-}
+console.log(`O número ${numero} é ${tipo}.`);
 
 
 // 3. Peça ao usuário a nota de um aluno e se for maior que 7, mostre aprovado se não mostre recuperação.
-let nota = Number(prompt("Digite a nota do aluno:"));
 
-if (nota > 7) {
-    console.log(`O aluno tirou ${nota} e foi aprovado.`);
-} else {
-    console.log(`O aluno tirou ${nota} e esta de recuperação.`);
-}
+let nota = Number(prompt(`Digite a nota do aluno:`));
+let resultado = nota > 7 ? `foi aprovado` : `esta de recuperação`;
+
+console.log(`O aluno tirou ${nota} e ${resultado}.`);
 
 
 // 4. Peça para um usuário digitar um número e só permita que o número seja positivo.
 
-let numPositivo = Number(prompt("Digite um número positivo:"));
+let numPositivo = Number(prompt(`Digite um número positivo:`));
+
+numPositivo < 0  
+    ? console.log(`Você começou com um número negativo!`) 
+    : console.log(`O número ${numPositivo} é válido.`);
 
 while (numPositivo < 0) {
-    console.log("Número inválido! Digite um número positivo.");
-    numPositivo = Number(prompt("Digite novamente:"));
+    numPositivo = Number(prompt(`Número inválido! Digite um número positivo:`));
 }
-
-console.log("Número válido:", numPositivo);
+console.log(`Número final aceito: ${numPositivo}`);
 
 
 // 5. Peça para o usuário digitar o preço de um produto e diga se ele é caro se custar mais de 100 reais e barato se custar menos que 100.
 
-let preco = parseFloat(prompt("Digite o preço do produto:"));
+let preco = parseFloat(prompt(`Digite o preço do produto:`));
+let classificacao = preco > 100 ? `caro` : `barato`;
 
-if (preco > 100) {
-    console.log(`O produto custa R$ ${preco.toFixed(2)}, por isso é caro.`);
-} else {
-    console.log(`O produto custa R$ ${preco.toFixed(2)}, por isso é barato.`);
-}
+console.log(`O produto custa R$ ${preco.toFixed(2)}, por isso é ${classificacao}.`);
 
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+// ///////////////////////////////      SWITCH     /////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////
 
 // UTILIZE O SWITCH PARA RESOLVER AS SEGUINTES QUESTÕES:
-
 
 // 1. Você está desenvolvendo um sistema simples de menu para um aplicativo.
 
@@ -196,8 +195,6 @@ switch (conceito) {
 
 // Caso a opção seja inválida, exibir "Opção inválida"
 
-// 4. Sistema de Atendimento com Fluxo
-
 let option = prompt("Escolha uma opção:\n1 - Criar conta\n2 - Fazer login\n3 - Recuperar senha");
 
 switch (option) {
@@ -259,51 +256,54 @@ switch (option) {
 
 // 5. Simulação de Caixa Eletrônico
 
-let saldo = 1000; // Saldo inicial
+let saldo = 1000
 
-let opcao = prompt("Caixa Eletrônico\n1 - Consultar saldo\n2 - Sacar dinheiro\n3 - Depositar dinheiro");
+let option1 = prompt(`Bem-vindo ao Caixa Eletrônico!\nEscolha uma opção:\n1 - Consultar saldo\n2 - Sacar dinheiro\n3 - Depositar dinheiro`);
 
-switch (opcao) {
+switch (option1) {
   case '1':
     console.log(`Seu saldo atual é: R$ ${saldo.toFixed(2)}`);
     break;
 
   case '2':
-    let valorSaque = parseFloat(prompt("Quanto deseja sacar?"));
+    let valorSaque = parseFloat(prompt(`Quanto deseja sacar?`));
 
     if (valorSaque <= saldo) {
-      saldo -= valorSaque; // Subtrai do saldo: saldo = saldo - valorSaque
+    // Subtrai do saldo: saldo = saldo - valorSaque
+      saldo -= valorSaque; 
       console.log("Saque realizado com sucesso!");
     } else {
-      console.log("Saldo insuficiente.");
+      console.log(`Saldo insuficiente.`);
     }
     
     console.log(`Saldo atual: R$ ${saldo.toFixed(2)}`);
     break;
 
   case '3':
-    let valorDeposito = parseFloat(prompt("Quanto deseja depositar?"));
+    let valorDeposito = parseFloat(prompt(`Quanto deseja depositar?`));
     
     if (valorDeposito > 0) {
-      saldo += valorDeposito; // Adiciona ao saldo: saldo = saldo + valorDeposito
-      console.log("Depósito realizado com sucesso!");
+    // Adiciona ao saldo: saldo = saldo + valorDeposito
+      saldo += valorDeposito; 
+      console.log(`Depósito realizado com sucesso!`);
     } else {
-      console.log("Valor de depósito inválido.");
+      console.log(`Valor de depósito inválido.`);
     }
     
     console.log(`Novo saldo: R$ ${saldo.toFixed(2)}`);
     break;
 
   default:
-    console.log("Opção inválida.");
+    console.log(`Opção inválida.`);
 }
 
 
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
-// /////////////////////////  Laço de repetição ////////////////////////////////////////////
-// /////////////////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////  LAÇO DE REPETIÇÃO ////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////
 
-// 1. Você está desenvolvendo um sistema simples de menu para um aplicativo.
+// 1. Sistema de Menu com Laço de Repetição.
+// Você está desenvolvendo um sistema simples de menu para um aplicativo.
 
 // Solicite ao usuário uma opção digitando:
 // 1 - Cadastrar usuário
@@ -311,16 +311,61 @@ switch (opcao) {
 // 3 - Sair do sistema
 
 // Utilize switch para exibir a ação correspondente a cada opção. Caso o valor seja inválido, exiba "Opção inválida".
-
 // Repita a solicitação até que a pessoa selecione a opção 3 para sair do sistema.
 
-// #############################
-// ######## for ##################
-// #############################
+let OPTION;
+
+do {
+  OPTION = prompt("--- SISTEMA DE USUÁRIOS ---\n1 - Cadastrar usuário\n2 - Listar usuários\n3 - Sair do sistema");
+
+  switch (OPTION) {
+    case '1':
+      console.log(`Cadastrar usuário selecionada.`);
+      break;
+
+    case '2':
+      console.log(`Ação: Listar usuários selecionada.`);
+      break;
+
+    case '3':
+      console.log(`Saindo do sistema... Até logo!`);
+      break;
+
+    default:
+      console.log(`Opção inválida! Tente novamente.`);
+  }
+
+} while (opcao !== '3');
+
+
+// /////////////////////////////////////////////////////////////////////////////////////////
+// //////////////////////////////////////  FOR /////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////////////
+
 
 // 1. Crie um programa que seria uma lista de desejos, onde o usuário pode pedir 3 coisas e você mostra cada um dos pedidos na tela.
 
+let listaDesejos = '';
+
+for (let i = 1; i <= 3; i++) {
+    let item = prompt(`Digite o ${i}º desejo:`);
+    listaDesejos += `${i}. ${item}\n`;
+}
+
+console.log("Sua lista de desejos:\n" + listaDesejos);
+
 // 2. Crie um programa que receba um valor de compra e depois um número de parcelas, e depois mostre na tela o valor de cada parcela utilizando um for
+
+let valorCompra = parseFloat(prompt(`Digite o valor total da compra:`));
+let parcelas = parseInt(prompt(`Digite o número de parcelas:`));
+
+let valorParcela = valorCompra / parcelas;
+
+console.log(`Valor total: R$ ${valorCompra.toFixed(2)}`);
+
+for (let i = 1; i <= parcelas; i++) {
+    console.log(`Parcela ${i}: R$ ${valorParcela.toFixed(2)}`);
+}
 
 // 3. Um sistema de caixa precisa calcular o total de uma compra.
 
@@ -328,12 +373,40 @@ switch (opcao) {
 // Depois, usando um for:
 // 	peça o preço de cada produto
 // 	some os valores (dica: soma += valor)
-
 // Ao final, exiba o total da compra.
+
+let quantidadeComprado = parseInt(prompt(`Quantos produtos foram comprados?`));
+let total = 0;
+
+for (let i = 1; i <= quantidadeComprado; i++) {
+    let preco = parseFloat(prompt(`Digite o preço do produto ${i}:`));
+    total += preco; 
+}
+
+console.log(`Total da compra: R$ ${total.toFixed(2)}`);
 
 // 4. Um professor tem 10 alunos e precisa saber quantos foram aprovados, crie um programa que peça a nota de cada um dos 10 alunos e se a nota for maior ou igual a 7, mostre aprovado, se não, recuperação.
 
 // no final mostre o total de alunos aprovados e de recuperação
+
+let aprovados = 0;
+let recuperacao = 0;
+
+for (let i = 1; i <= 10; i++) {
+    let nota = parseFloat(prompt(`Digite a nota do aluno ${i}:`));
+    
+    if (nota >= 7) {
+        console.log(`Aluno ${i}: Aprovado`);
+        aprovados++;
+    } else {
+        console.log(`Aluno ${i}: Recuperação`);
+        recuperacao++;
+    }
+}
+
+console.log("--- Resultado dos Alunos ---");
+console.log(`Total de aprovados: ${aprovados}`);
+console.log(`Total em recuperação: ${recuperacao}`);
 
 
 // #############################
@@ -348,6 +421,15 @@ switch (opcao) {
 // Utilize um while para continuar pedindo a senha até o usuário acertar.
 
 // Quando acertar, exiba: "Acesso liberado".
+
+const password = `honorato123`;
+let tentativa = Number(prompt("Digite a senha:"));
+
+while (tentativa !== password) {
+    tentativa = Number(prompt("Senha incorreta! Tente novamente:"));
+}
+
+console.log("Acesso liberado");
 
 // 2 . Menu até sair
 // sistema de saque/depósito (simulação de caixa eletrônico)
@@ -381,6 +463,38 @@ switch (opcao) {
 // 4 (Sair):
 // 	Se o usuário selecionar o 4 deve encerrar o programa, se for qualquer outra opção deve pedir novamente a opção solicitada
 
+let SALDO = 1000;
+let OPÇÃO = "";
+
+while (OPÇÃO !== "4") {
+    opcao = prompt("--- CAIXA ELETRÔNICO ---\n1 - Consultar Saldo\n2 - Sacar\n3 - Depositar\n4 - Sair");
+
+    switch (OPÇÃO) {
+        case "1":
+            console.log(`Saldo atual: R$ ${saldo.toFixed(2)}`);
+            break;
+        case "2":
+            let saque = parseFloat(prompt("Valor do saque:"));
+            if (saque <= saldo) {
+                saldo -= saque;
+                console.log(`Saque realizado! Novo saldo: R$ ${saldo.toFixed(2)}`);
+            } else {
+                console.log("Saldo insuficiente.");
+            }
+            break;
+        case "3":
+            let deposito = parseFloat(prompt("Valor do depósito:"));
+            saldo += deposito;
+            console.log(`Depósito realizado! Novo saldo: R$ ${saldo.toFixed(2)}`);
+            break;
+        case "4":
+            console.log("Encerrando sistema...");
+            break;
+        default:
+            console.log("Opção inválida.");
+    }
+}
+
 // 3. caixa com múltiplas compras
 
 // Um sistema de caixa permite registrar várias compras.
@@ -394,12 +508,33 @@ switch (opcao) {
 
 // total arrecadado
 
+let totalArrecadado = 0;
+let continuar = `s` || `Sim` || `sim` || `S`;
+
+while (continua === `s` || `Sim` || `sim` || `S`) {
+    let valorCompra = parseFloat(prompt("Digite o valor da compra:"));
+    totalArrecadado += valorCompra;
+    
+    continuar = prompt("Deseja registrar outra compra? (s/n)");
+}
+
+console.log(`Total arrecadado: R$ ${totalArrecadado.toFixed(2)}`);
+
+
 // 4. validação de entrada
 
 // Um sistema precisa garantir que o usuário digite um valor válido.
-
 // Solicite um número entre 1 e 10.
 // Utilize while para repetir a pergunta até o valor ser válido.
+
+let number = Number(prompt("Digite um número entre 1 e 10:"));
+
+while (number < 1 || number > 10 || isNaN(number)) {
+    number = Number(prompt("Valor inválido! Digite um número entre 1 e 10:"));
+}
+
+console.log(`O número ${number} é válido. Obrigado!`);
+
 
 // #############################
 // ######## do  while #############
@@ -411,9 +546,20 @@ switch (opcao) {
 
 // Pergunte:
 // "Deseja continuar? (s/n)"
-
 // Utilize do while para repetir até o usuário digitar "s" ou "n".
 
+let confirmacao
+
+do {
+    confirmacao = prompt("Deseja continuar? (s/n)").toLowerCase();
+    
+    if (confirmacao !== 's' && confirmacao !== 'n') {
+        alert("Entrada inválida! Por favor, digite 's' ou 'n'.");
+    }
+
+} while (confirmacao !== 's' && confirmacao !== 'n');
+
+console.log("Usuário confirmou com: " + confirmacao);
 
 // 2. sistema de menu com operações
 
@@ -429,6 +575,41 @@ switch (opcao) {
 // executar a operação escolhida (usar switch)
 // repetir até o usuário escolher sair
 
+let opcao2;
+
+do {
+    opcao2 = parseInt(prompt(
+        `--- MENU ---\n` +
+        `1 - Somar dois números\n`+
+        `2 - Subtrair dois números\n`+
+        `3 - Sair\n` +
+        `Escolha uma opção:`
+    ));
+
+    switch (opcao2) {
+        case `1`:
+            let n1 = parseFloat(prompt(`Digite o primeiro número:`));
+            let n2 = parseFloat(prompt(`Digite o segundo número:`));
+            console.log(`Resultado da Soma: ${n1 + n2}`);
+            break;
+
+        case `2`:
+            let n3 = parseFloat(prompt(`Digite o primeiro número:`));
+            let n4 = parseFloat(prompt(`Digite o segundo número:`));
+            console.log(`Resultado da Subtração: ${n3 - n4}`);
+            break;
+
+        case `3`:
+            console.log(`Saindo do sistema...`);
+            break;
+
+        default:
+            console.log(`Opção inválida! Tente novamente.`);
+            break;
+    }
+
+} while (opcao2 !== 3);
+
 
 // ###############################################################################
 // ##################################### Objetos ###################################
@@ -439,11 +620,20 @@ switch (opcao) {
 // nome do produto
 // preço
 // quantidade em estoque
-
 // Depois monte um objeto chamado produto com essas informações e exiba:
 
 // nome
 // valor total em estoque (preço × quantidade)
+
+const nome = prompt(`Nome do produto:`);
+const price = parseFloat(prompt(`Preço:`));
+const quantidade = parseInt(prompt(`Quantidade em estoque:`));
+
+const produto = { nome, price, quantidade };
+
+const valorTotal = produto.price * produto.quantidade;
+console.log(`Produto: ${produto.nome}`);
+console.log(`Valor total em estoque: R$ ${valorTotal.toFixed(2)}`);
 
 // 2. Cadastro de aluno
 // Peça via prompt:
@@ -458,6 +648,22 @@ switch (opcao) {
 // “Recuperação” se média >= 5 e < 7
 // “Reprovado” se média < 5
 
+const aluno = {
+    nome: prompt(`Nome do aluno:`),
+    nota1: parseFloat(prompt(`Nota 1:`)),
+    nota2: parseFloat(prompt(`Nota 2:`))
+};
+
+const media = (aluno.nota1 + aluno.nota2) / 2;
+
+if (media >= 7) {
+    console.log(`${aluno.nome}: Aprovado`);
+} else if (media >= 5) {
+    console.log(`${aluno.nome}: Recuperação`);
+} else {
+    console.log(`${aluno.nome}: Reprovado`);
+}
+
 // 3. Controle de funcionário
 // Peça:
 // nome
@@ -469,6 +675,20 @@ switch (opcao) {
 // Se tiver mais de 3 faltas, mostre que o funcionário perdeu o bônus.
 // Caso contrário, mostre que receberá bônus de 10% sobre o salário.
 
+const funcionario = {
+    nome: prompt(`Digite o seu Nome:`),
+    cargo: prompt(`Digite o seu Nome: Cargo:`),
+    salario: parseFloat(prompt(`Digite o seu Salário:`)),
+    faltas: parseInt(prompt(`Quantidade de faltas:`))
+};
+
+if (funcionario.faltas > 3) {
+    console.log("Funcionário perdeu o bônus.");
+} else {
+    const bonus = funcionario.salario * 0.10;
+    console.log(`Você receberá bônus de 10% (R$ ${bonus.toFixed(2)}).`);
+}
+
 // 4. Pedido de lanchonete
 // Crie um objeto pedido com:
 // nome do cliente
@@ -479,6 +699,22 @@ switch (opcao) {
 // Calcule o total do pedido.
 // Se o total for maior que 30, aplique 5% de desconto.
 // Mostre o resumo final do pedido.
+
+const pedido = {
+    cliente: prompt(`Nome do cliente:`),
+    lanche: prompt(`Nome do lanche:`),
+    quantidade: parseInt(prompt(`Quantidade:`)),
+    precoUnitario: parseFloat(prompt(`Preço unitário:`))
+};
+
+let totalPedido = pedido.quantidade * pedido.precoUnitario;
+
+if (totalPedido > 30) {
+    totalPedido -= totalPedido * 0.05;
+    console.log("Desconto de 5% aplicado ao seu pedido!");
+}
+
+console.log(`Resumo: ${pedido.cliente}, seu pedido de ${pedido.lanche} ficou em R$ ${totalPedido.toFixed(2)}`);
 
 // 5. Cadastro de carro
 // Peça:
@@ -495,6 +731,22 @@ switch (opcao) {
 
 // Depois exiba todos os dados do objeto.
 
+const carro = {
+    marca: prompt(`Marca:`),
+    modelo: prompt(`Modelo:`),
+    ano: parseInt(prompt(`Ano:`)),
+    valor: parseFloat(prompt(`Valor:`))
+};
+
+const ANO_REFERENCIA = 2026; 
+const idadeCarro = ANO_REFERENCIA - carro.ano;
+
+if (idadeCarro < 10) {
+    console.log(`Status: Seminovo`);
+} else {
+    console.log(`Status: Usado`);
+}
+
 // 6. Lista de produtos
 // Crie manualmente um array de objetos chamado produtos com pelo menos 4 produtos.
 // Cada produto deve ter:
@@ -504,10 +756,48 @@ switch (opcao) {
 
 // Faça um for para mostrar apenas os produtos com estoque maior que 0.
 
+const produtos = [
+    { nome: 'Teclado Mecânico Longitech', preco: 150, estoque: 10 },
+    { nome: 'Mouse Cobra 10000 dpi', preco: 80, estoque: 0 },
+    { nome: 'Monitor Samsung 240hz', preco: 900, estoque: 5 },
+    { nome: 'Fone Longitech', preco: 200, estoque: 0 }
+];
+
+console.log('Produtos disponíveis (estoque > 0):');
+
+for (let i = 0; i < produtos.length; i++) {
+    if (produtos[i].estoque > 0) {
+        console.log(`${produtos[i].nome}`);
+    }
+}
+
 // 7. Sistema de estoque
 // Usando um array de objetos produtos, percorra a lista e:
 // exiba o nome dos produtos com estoque baixo (menor que 5)
 // exiba o valor total de cada item em estoque (preço × estoque)
+
+// Reaproveitando o array do exercício anterior
+
+const products = [
+    { nome: 'Teclado Mecânico Longitech', preco: 150, estoque: 10 },
+    { nome: 'Mouse Cobra 10000 dpi', preco: 80, estoque: 0 },
+    { nome: 'Monitor Samsung 240hz', preco: 900, estoque: 5 },
+    { nome: 'Fone Longitech', preco: 200, estoque: 2 } // Exemplo de estoque baixo
+];
+
+console.log('Relatório de Estoque:');
+
+for (const product of products) {
+    let valorTotalItem = product.preco * product.estoque;
+    console.log(`Produto: ${product.nome} | Valor total em estoque: R$ ${valorTotalItem.toFixed(2)}`);
+
+    if (product.estoque < 5) {
+        console.log(`O produto "${product.nome}" está com estoque baixo, apenas (${product.estoque} unidades).`);
+    }
+
+    console.log("----------------------------");
+}
+
 
 // 8. Catálogo de alunos
 
@@ -523,6 +813,28 @@ switch (opcao) {
 
 // Depois conte quantos foram aprovados e quantos foram reprovados.
 
+const listaAlunos = [
+    { nome: 'Wanderson', nota: 8, curso: 'TI' },
+    { nome: 'Osvaldo', nota: 4, curso: 'Design' },
+    { nome: 'Messi', nota: 9, curso: 'TI' },
+    { nome: 'Ronaldinho', nota: 6, curso: 'ADM' }
+];
+
+let passouDeAno = 0;
+let reprovados = 0;
+
+for (let aluno of listaAlunos) {
+    if (aluno.nota >= 7) {
+        console.log(`${aluno.nome} - Aprovado`);
+        passouDeAno++;
+    } else {
+        console.log(`${aluno.nome} - Reprovado`);
+        reprovados++;
+    }
+}
+
+console.log(`Total Aprovados: ${passouDeAno}\n Total Reprovados: ${reprovados}`);
+
 // 9. Controle de vendas
 // Crie um array de objetos vendas com:
 // cliente
@@ -537,6 +849,28 @@ switch (opcao) {
 
 // Se uma venda passar de 100 reais, exiba “Venda alta”.
 
+
+let vendas = [
+    { cliente: "Wanderson", produto: "Notebook", quantidade: 1, precoUnitario: 2400 },
+    { cliente: "Yu-Gi-Oh", produto: "Cartas de Monstros de Duelo, Ofical", quantidade: 2, precoUnitario: 250 },
+    { cliente: "Ash Ketchum", produto: "Pokebolas, Master Balls", quantidade: 3, precoUnitario: 50 }
+];
+
+let faturamento = 0;
+
+for (const sell of vendas) {
+    let totalVenda = sell.quantidade * sell.precoUnitario;
+    faturamento += totalVenda;
+    
+    console.log(`Venda para ${sell.cliente}: R$ ${totalVenda}`);
+    
+    if (totalVenda > 100) {
+        console.log("Venda alta!");
+    }
+}
+
+console.log(`Valor total de todas as vendas: R$ ${faturamento.toFixed(2)}`);
+
 // 10. Sistema de login simples
 // Crie um objeto usuário com:
 // login
@@ -550,10 +884,24 @@ switch (opcao) {
 // se o tipo for “admin”, mostre “Acesso total”
 // senão, mostre “Acesso limitado”
 
+const usuario = {
+    login: 'honorato123',
+    senha: 'senha123',
+    tipo: 'admin'
+};
 
+let userDigitado = prompt('Login:');
+let senhaDigitada = prompt('Senha:');
 
-
-
+if (userDigitado === usuario.login && senhaDigitada === usuario.senha) {
+    if (usuario.tipo === "admin") {
+        console.log("Acesso total");
+    } else {
+        console.log("Acesso limitado");
+    }
+} else {
+    console.log("Login ou senha incorretos.");
+}
 
 
 
