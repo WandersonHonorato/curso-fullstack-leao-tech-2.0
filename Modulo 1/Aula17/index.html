@@ -8,7 +8,6 @@
 <script>
 
 
-
 let cadastros = [
     {
         nome: 'Wanderson',
@@ -40,31 +39,28 @@ while(opcao !== '3'){
 
     switch(opcao){
         case '1':
-            let cadastro = {}
-            cadastro.nome = prompt('Digite o seu nome:')
-            cadastro.telefone = prompt('Digite o seu número de telefone:')
-            cadastro.cidade = parseInt(prompt('Digite a cidade:'))
-            cadastro.idade = parseInt(prompt('Digite sua idade:'))
-            cadastro.profissao = prompt('Digite a profissão:')
+            console.log('Opção selecionada: Cadastrar')
+            let cadastros = {}
+            cadastros.nome = prompt('Digite o seu nome:')
+            cadastros.telefone = prompt('Digite o seu número de telefone:')
+            cadastros.cidade = parseInt(prompt('Digite a cidade:'))
+            cadastros.idade = parseInt(prompt('Digite sua idade:'))
+            cadastros.profissao = prompt('Digite a profissão:')
 
-            cadastros.push(cadastro)
-
+            cadastros.push(cadastros)
             console.log('Cadastro realizado com sucesso!')
-        break
+        break;
 
         case '2':
-            let lista = 'Lista de Cadastrados:\n\n'
-
-            for(let i = 0; i < listaCadastrados.length; i++){
-                let cadastro = cadastros[i]
-                console.log( `Nome: ${cadastro{i}.nome} - \nTelefone: ${cadastro.telefone}`)
-
-            console.log(`cadastros`)
+            console.log('Opção selecionada: Listar');
+            for(let i = 0; i < cadastros.length; i++){
+                console.log( `Nome: ${cadastros[i].nome} - \nTelefone: ${cadastros.telefone}`)
+            }
         break;
 
         case '3':
             console.log('Saindo do programa...')
-        break
+        break;
 
         default:
             console.log('Opção inválida. Tente novamente.')
@@ -72,6 +68,7 @@ while(opcao !== '3'){
     }
 
 }
+
 
 
 
