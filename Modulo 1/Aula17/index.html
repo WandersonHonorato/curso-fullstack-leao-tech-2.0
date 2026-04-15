@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17</title>
+
+<script>
+
+
+
+let cadastros = [
+    {
+        nome: 'Wanderson',
+        telefone: '11999999999',
+        cidade: 'Fortaleza',
+        idade: 30,
+        profissao: 'Desenvolvedor'
+    },
+    {
+        nome: 'Maria',
+        telefone: '11988888888',
+        cidade: 'São Paulo',
+        idade: 25,
+        profissao: 'Designer'
+    },
+    {
+        nome: 'João',
+        telefone: '11977777777',
+        cidade: 'Rio de Janeiro',
+        idade: 28,
+        profissao: 'Analista de Sistemas'
+    }
+]
+
+let opcao = ''
+
+while(opcao !== '3'){
+    opcao = prompt('Escolha uma opção:\n1 - Cadastrar\n2 - Listar\n3 - Sair')
+
+    switch(opcao){
+        case '1':
+            let cadastro = {}
+            cadastro.nome = prompt('Digite o seu nome:')
+            cadastro.telefone = prompt('Digite o seu número de telefone:')
+            cadastro.cidade = parseInt(prompt('Digite a cidade:'))
+            cadastro.idade = parseInt(prompt('Digite sua idade:'))
+            cadastro.profissao = prompt('Digite a profissão:')
+
+            cadastros.push(cadastro)
+
+            console.log('Cadastro realizado com sucesso!')
+        break
+
+        case '2':
+            let lista = 'Lista de Cadastrados:\n\n'
+
+            for(let i = 0; i < listaCadastrados.length; i++){
+                let cadastro = cadastros[i]
+                console.log( `Nome: ${cadastro{i}.nome} - \nTelefone: ${cadastro.telefone}`)
+
+            console.log(`cadastros`)
+        break;
+
+        case '3':
+            console.log('Saindo do programa...')
+        break
+
+        default:
+            console.log('Opção inválida. Tente novamente.')
+            break;
+    }
+
+}
+
+
+
+
+</script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
