@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18</title>
+
+    <script>
+        // Sem parametros e sem retorno
+        function exibirMsgErro(){
+            console.log('Not Found: Algo deu errado (404)!')
+        }
+        exibirMsgErro()
+
+        //----------------------------------------------------
+
+        function calculadora(operacao, num1, num2){
+            let resultado
+            switch(operacao){
+                case '+':
+                    resultado = num1 + num2
+                break;
+                case '-':
+                    resultado = num1 - num2
+                break;
+                case '*':
+                    resultado = num1 * num2
+                break;
+                case '/':
+                    resultado = num1 / num2
+                break;
+                default:
+                    console.log('Operação inválida!')  
+            }
+            console.log(`O resultado da operação ${num1} ${operacao} ${num2} é: ${resultado}`)
+                return resultado
+        }
+
+        let resultadoOperacao = calculadora('+', 10, 5)
+        console.log(`O resultado da operação é: ${resultadoOperacao}`)
+
+        //----------------------------------------------------
+
+        // Função definida por expressão
+        const soma = function(num1, num2){
+            let resultado = num1 + num2
+            console.log(`A soma de ${num1} e ${num2} é: ${resultado}`)
+            return resultado
+        }
+
+        //----------------------------------------------------
+
+        // Arrow Function
+        let subtrair = (num1, num2) => {
+            let resultado = num1 - num2
+            console.log(`A subtração de ${num1} e ${num2} é: ${resultado}`)
+            return resultado
+        }
+
+        let subtarir = (a, b) => a - b // Retorno implícito
+        let msgErro = (codigo) => `Erro ${codigo}: Algo deu errado!`
+
+        console.log(msgErro(404))
+        console.log(subtrair(10, 5))
+
+        //----------------------------------------------------  
+        // Função com parâmetro default
+
+        function saudacao(nome, saudacao = "Olá") {
+            console.log(`${saudacao}, ${nome}!`);
+        }
+
+        saudacao();
+
+        //----------------------------------------------------
+
+        // Função Callback     (Função dentro de outra função, primeiro processa a função chamada e depois a função callback)  
+        function processar(funcaoCallback){
+            console.log('Iniciando processamento...')
+            funcaoCallback()
+            console.log('Processamento concluído!')
+        }
+
+        processar(() => {
+            console.log('Executando a função callback!')
+        })
+
+        setTimeout(() => {
+            console.log('Executando após 2 segundos!')
+        }, 2000)
+
+        setTimeout(() => {
+            console.log('Executando após 5 segundos!')
+        }, 5000)
+
+
+
+    </script>
+
+ </head>
+ <body>
+    
+ </body>
+ </html>

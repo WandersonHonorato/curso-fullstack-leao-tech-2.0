@@ -198,9 +198,13 @@ function calcularBhaskara(a, b, c){
         let raiz1 = (-b + Math.sqrt(delta)) / (2 * a)
         let raiz2 = (-b - Math.sqrt(delta)) / (2 * a)
         console.log(`Existem duas raízes reais para essa equação: x1 = ${raiz1} e x2 = ${raiz2}`)
+
+        return [raiz1, raiz2]
     }
 
-    console.log(`1,3,2`)
+    let resultado = calcularBhaskara(1, 3, 2)
+
+    console.log(resultado)
 
 }
 
