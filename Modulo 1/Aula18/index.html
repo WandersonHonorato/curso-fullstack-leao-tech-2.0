@@ -6,93 +6,219 @@
     <title>Aula 18</title>
 
     <script>
-        // Sem parametros e sem retorno
-        function exibirMsgErro(){
-            console.log('Not Found: Algo deu errado (404)!')
-        }
-        exibirMsgErro()
+        // // Sem parametros e sem retorno
+        // function exibirMsgErro(){
+        //     console.log('Not Found: Algo deu errado (404)!')
+        // }
+        // exibirMsgErro()
+
+        // //----------------------------------------------------
+
+        // function calculadora(operacao, num1, num2){
+        //     let resultado
+        //     switch(operacao){
+        //         case '+':
+        //             resultado = num1 + num2
+        //         break;
+        //         case '-':
+        //             resultado = num1 - num2
+        //         break;
+        //         case '*':
+        //             resultado = num1 * num2
+        //         break;
+        //         case '/':
+        //             resultado = num1 / num2
+        //         break;
+        //         default:
+        //             console.log('Operação inválida!')  
+        //     }
+        //     console.log(`O resultado da operação ${num1} ${operacao} ${num2} é: ${resultado}`)
+        //         return resultado
+        // }
+
+        // let resultadoOperacao = calculadora('+', 10, 5)
+        // console.log(`O resultado da operação é: ${resultadoOperacao}`)
+
+        // //----------------------------------------------------
+
+        // // Função definida por expressão
+        // const soma = function(num1, num2){
+        //     let resultado = num1 + num2
+        //     console.log(`A soma de ${num1} e ${num2} é: ${resultado}`)
+        //     return resultado
+        // }
+
+        // //----------------------------------------------------
+
+        // // Arrow Function
+        // let subtrair = (num1, num2) => {
+        //     let resultado = num1 - num2
+        //     console.log(`A subtração de ${num1} e ${num2} é: ${resultado}`)
+        //     return resultado
+        // }
+
+        // let subtarir = (a, b) => a - b // Retorno implícito
+        // let msgErro = (codigo) => `Erro ${codigo}: Algo deu errado!`
+
+        // console.log(msgErro(404))
+        // console.log(subtrair(10, 5))
+
+        // //----------------------------------------------------  
+        // // Função com parâmetro default
+
+        // function saudacao(nome, saudacao = "Olá") {
+        //     console.log(`${saudacao}, ${nome}!`);
+        // }
+
+        // saudacao();
+
+        // //----------------------------------------------------
+
+        // // Função Callback     (Função dentro de outra função, primeiro processa a função chamada e depois a função callback)  
+        // function processar(funcaoCallback){
+        //     console.log('Iniciando processamento...')
+        //     funcaoCallback()
+        //     console.log('Processamento concluído!')
+        // }
+
+        // processar(() => {
+        //     console.log('Executando a função callback!')
+        // })
+
+        // setTimeout(() => {
+        //     console.log('Executando após 2 segundos!')
+        // }, 2000)
+
+        // setTimeout(() => {
+        //     console.log('Executando após 5 segundos!')
+        // }, 5000)
+
 
         //----------------------------------------------------
 
-        function calculadora(operacao, num1, num2){
-            let resultado
-            switch(operacao){
-                case '+':
-                    resultado = num1 + num2
-                break;
-                case '-':
-                    resultado = num1 - num2
-                break;
-                case '*':
-                    resultado = num1 * num2
-                break;
-                case '/':
-                    resultado = num1 / num2
-                break;
-                default:
-                    console.log('Operação inválida!')  
-            }
-            console.log(`O resultado da operação ${num1} ${operacao} ${num2} é: ${resultado}`)
-                return resultado
-        }
+        // ForEach - Método de array para iterar sobre os elementos de um array
 
-        let resultadoOperacao = calculadora('+', 10, 5)
-        console.log(`O resultado da operação é: ${resultadoOperacao}`)
-
-        //----------------------------------------------------
-
-        // Função definida por expressão
-        const soma = function(num1, num2){
-            let resultado = num1 + num2
-            console.log(`A soma de ${num1} e ${num2} é: ${resultado}`)
-            return resultado
-        }
-
-        //----------------------------------------------------
-
-        // Arrow Function
-        let subtrair = (num1, num2) => {
-            let resultado = num1 - num2
-            console.log(`A subtração de ${num1} e ${num2} é: ${resultado}`)
-            return resultado
-        }
-
-        let subtarir = (a, b) => a - b // Retorno implícito
-        let msgErro = (codigo) => `Erro ${codigo}: Algo deu errado!`
-
-        console.log(msgErro(404))
-        console.log(subtrair(10, 5))
-
-        //----------------------------------------------------  
-        // Função com parâmetro default
-
-        function saudacao(nome, saudacao = "Olá") {
-            console.log(`${saudacao}, ${nome}!`);
-        }
-
-        saudacao();
-
-        //----------------------------------------------------
-
-        // Função Callback     (Função dentro de outra função, primeiro processa a função chamada e depois a função callback)  
-        function processar(funcaoCallback){
-            console.log('Iniciando processamento...')
-            funcaoCallback()
-            console.log('Processamento concluído!')
-        }
-
-        processar(() => {
-            console.log('Executando a função callback!')
+        let usuarios = ['Wanderson', 'Maria', 'João', 'Letícia', 'Jéssica', 'Carlos']
+        usuarios.forEach((user) => {
+            console.log(`Usuário: ${user}`)
         })
 
-        setTimeout(() => {
-            console.log('Executando após 2 segundos!')
-        }, 2000)
+        // Método map - Método de array para criar um novo array a partir de um array existente, aplicando uma função a cada elemento do array original
 
-        setTimeout(() => {
-            console.log('Executando após 5 segundos!')
-        }, 5000)
+        let precos = [100, 150, 89.99, 25.00, 300]
+        let precosComDesconto = precos.map((preco) => {
+            let desconto = preco - (preco * 0.1) // Aplica um desconto de 10%
+            return desconto
+        })
+        console.log(precosComDesconto)
+        console.log(precosComDesconto);
 
+        // Filter - Método de array para criar um novo array com todos os elementos que passam em um teste implementado por uma função fornecida
+        let maisBaratos = precos.filter((preco) => { 
+            return preco < 100 })
+        console.log(maisBaratos)
+
+
+        usuarios = [{
+            nome: 'Wanderson',
+            idade: 30,
+            profissao: 'Desenvolvedor',
+            ativo: true
+        },
+        {
+            nome: 'Maria',
+            idade: 25,
+            profissao: 'Designer',
+            ativo: false
+
+        },
+        {
+            nome: 'João',
+            idade: 28,
+            profissao: 'Analista de Sistemas',
+            ativo: true
+        }]
+
+        let usuariosAtivos = usuarios.filter((usuario) => {
+            return usuario.ativo
+        })
+        console.log(usuariosAtivos)
+
+
+        // Reduce - Método de array para reduzir um array a um único valor, aplicando uma função a um acumulador e a cada elemento do array (da esquerda para a direita)
+        
+
+
+        // Menu com cadastrar, listar, deletar e sair usando funções e validações
+
+            let cadastros = []
+
+            function cadastrarContatos(nome, telefone, cidade, idade, profissao, cadastros){
+     
+            let cadastrar = {
+            nome: prompt('Digite o seu nome:'),
+            telefone: prompt('Digite o seu telefone:'),
+            cidade: parseInt(prompt('Digite a sua cidade:')),
+            idade: parseInt(prompt('Digite a sua idade:')),
+            profissao: prompt('Digite a sua profissão:')
+            };
+            cadastros.push(cadastrar)
+
+
+        function validarDados(validarNome, validarTelefone, validarCidade, validarIdade, validarProfissao){
+                console.log('Validando os dados do cadastro...')
+                if(validarNome === '' || validarTelefone === '' || validarCidade === '' || validarIdade === '' || validarProfissao === ''){
+                    console.log('Erro: Todos os campos devem ser preenchidos!')
+                    return false
+                } else {
+                    console.log('Dados validados com sucesso!')
+                    return true
+            }
+        }
+
+        function listarContatos(cadastros){
+            console.log('Listando os contatos cadastrados...')
+            for(let i = 0; i < cadastros.length; i++){
+                console.log( `Nome: ${cadastros[i].nome} - \nTelefone: ${cadastros[i].telefone} - \nCidade: ${cadastros[i].cidade} - \nIdade: ${cadastros[i].idade} - \nProfissão: ${cadastros[i].profissao}`)
+            }
+        }
+
+        function deletarContatos(cadastros){
+            console.log('Deletando um contato cadastrado...')
+            for(let i = 0; i < cadastros.length; i++){
+                console.log( `Digite o número de telefone do usuário que você deseja deletar: ${i} - ${cadastros[i].telefone}`)
+            }
+        }
+
+        let opcao = ''
+
+        while(opcao !== '4' || opcao !== 'sair'){
+             let opcao = prompt('Menu:\n1 - Cadastrar\n2 - Listar\n3 - Deletar\n4 - Sair')   
+                switch(opcao){
+                    case '1':
+                        cadastrarContatos()
+                    break;
+
+                    case '2':
+                        listarContatos(cadastros)
+                    break;
+
+                    case '3':
+                        deletarContatos(cadastros)
+                    break;
+
+                    case '4':
+                        console.log('Saindo do programa...')
+                        break;
+
+                    default:
+                        console.log('Opção inválida! Por favor, escolha uma opção válida.')
+                }
+            }
+
+
+   
+        
 
 
     </script>
