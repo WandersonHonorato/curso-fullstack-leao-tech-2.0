@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 20</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+
+    <style>
+        .caixa{
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Aula de DOM e Eventos</h1>
+        <div class="row">
+            <div class="col-12 d-flex">
+
+                <div class="caixa bg-success">
+                    <p>caixa 1</p>
+                </div>
+
+                <div class="caixa bg-dark text-light">
+                    <p>Caixa 2</p>
+                </div>
+
+                <div class="caixa bg-secondary">
+                    <p>Caixa 3</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="mt-5">
+                <button onclick="funcao1()" class="btn btn-success">
+                    Chamar função
+                </button>
+            </div>
+    </div>
+    
+    <script>
+        let lingua = 'pt-br'
+
+        function funcao1(){
+            if (lingua == 'pt-br'){
+            let caixas = document.getElementsByClassName('caixa')
+            for (let i=0; 1<caixas.length; i++){
+                caixas[i].innerHTML = `<p> Box ${i+1}</p>`
+                } lingua = 'en-us'
+
+            } else if (lingua == 'en-us') {
+                let caixas = document.getElementsByClassName('caixa')
+            for (let i=0; 1<caixas.length; i++){
+                caixas[i].innerHTML = `<p> Caixa ${i+1}</p>`
+                } lingua = 'pt-br'
+
+            }
+        }
+
+        
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</html>
