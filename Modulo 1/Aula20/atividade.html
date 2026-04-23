@@ -66,7 +66,6 @@
             let profissao = document.getElementById('profissao')
             let cidade = document.getElementById('cidade');
             let estado = document.getElementById('estado');
-            idade = parseInt(idade.value);
             
             usuarios.push({
                 nome: nome.value,
@@ -84,7 +83,6 @@
         function listarUsuarios() {
             console.log('Lista de Usuários:');
             let listaUsuarios = document.getElementById('listaUsuarios');
-
                 usuarios.forEach((usuario, index) => {
                 console.log(`${index + 1}. Nome: ${usuario.nome}, Idade: ${usuario.idade}, Profissão: ${usuario.profissao}, Cidade: ${usuario.cidade}, Estado: ${usuario.estado}`);
 
