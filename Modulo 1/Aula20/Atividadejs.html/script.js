@@ -49,13 +49,13 @@
     usuariosCadastrados.forEach(usuario => {
       resultado.innerHTML += `
         <div class="col-12 col-md-4 mb-4">
-        <div class="card shadow">
-        <img src="${usuario.foto}" class="card-img-top">
-        <div class="card-body">
-        <h5 class="card-title fw-bold">${usuario.nome}</h5>
-        <p class="card-text">Idade: ${usuario.idade}</p>
-        <p class="card-text">CPF: ${usuario.cpf}</p>
-        </div>
+             <div class="card shadow">
+             <img src="${usuario.foto}" class="card-img-top">
+             <div class="card-body">
+             <h5 class="card-title fw-bold">${usuario.nome}</h5>
+             <p class="card-text">Idade: ${usuario.idade}</p>
+             <p class="card-text">CPF: ${usuario.cpf}</p>
+             </div>
         </div>
         </div>`;
     });
