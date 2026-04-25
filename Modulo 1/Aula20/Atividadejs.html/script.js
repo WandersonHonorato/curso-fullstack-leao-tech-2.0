@@ -10,13 +10,13 @@
       nome: "Lionel Messi",
       idade: 36,
       cpf: "12345678901",
-      foto: "https://www.espn.com.br/futebol/jogador/_/id/45843/lionel-messi"
+      foto: "https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/06/messi-argentina-guatemala-e1718811255101.jpg?w=1200&h=1200&crop=1"
     },
     {
       nome: "Cristiano Ronaldo",
       idade: 38,
       cpf: "11111111111",
-      foto: "https://br.pinterest.com/pin/44965696270079692/"
+      foto: "https://static.wikia.nocookie.net/futebol/images/8/86/Cristiano_ronaldo_al_nassr_2.jpg/revision/latest?cb=20231007185259"
     }];
 
   function cadastrarUsuario() {
