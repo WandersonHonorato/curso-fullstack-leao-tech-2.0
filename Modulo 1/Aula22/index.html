@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 22 - Funções assíncronas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<style>
+   
+</style>
+<body style="margin-bottom: 500px;">
+   <div class="container">
+        <div class="row mt-5">
+            <div class="col-12">
+                <h1>Faça seu cadastro</h1>
+            </div>
+            <div class="col-6">
+                <div>
+                    <label for="nome">Nome: </label> <br>
+                    <input type="text" name="nome" id="nome">
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="idade">Idade</label> <br>
+                <input type="text" name="idade" id="idade">
+            </div>
+
+            <div class="col-6">
+                <div>
+                    <label for="cep">CEP:</label> <br>
+                    <input oninput="exibirCepLimite()" type="text" name="cep" id="cep" placeholder="Digite apenas números">
+                </div>
+                <div>
+                    <label for="cep">Rua:</label> <br>
+                    <input type="text" name="rua" id="rua">
+                </div>
+                <div>
+                    <label for="cep">Complemento:</label> <br>
+                    <input type="text" name="complemento" id="complemento">
+                </div>
+
+            </div>
+            <div class="col-6">
+                <div>
+                    <label for="cep">Cidade:</label> <br>
+                    <input type="text" name="cidade" id="cidade">
+                </div>
+                <div>
+                    <label for="cep">Estado:</label> <br>
+                    <input type="text" name="estado" id="estado">
+                </div>
+                <div>
+                    <label for="cep">Região:</label> <br>   
+                    <input type="text" name="regiao" id="regiao">
+                </div>
+            </div>
+        </div>
+   </div>
+
+   <button onclick="buscarCep()" class="btn btn-success my-3 mx-3">Exibir CEP</button>
+   
+</body>
+
+<script>
+
+function exibirCepLimite() {
+    let inputCEP = document.getElementById('cep')
+    let cep = inputCEP.value
+    if (cep.length == 8){
+        console.log(cep) 
+    }
+   } 
+
+function buscarCep() {
+    let cep = document.getElementById('cep').value
+    if (cep.length == 8 && cep !== ''){
+        fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(resposta => resposta.json())
+        .then(dados => {
+            console.log(dados)
+            let inputRua = document.getElementById('rua')
+            inputRua.value = dados.logradouro
+            inputRua.setAttribute('disabled', 'disabled')
+            
+            let inputComplemento = document.getElementById('complemento')
+            inputComplemento.value = dados.complemento
+            inputComplemento.setAttribute('disabled', 'disabled')
+
+            let inputCidade = document.getElementById('cidade')
+            inputCidade.value = dados.localidade
+            inputCidade.setAttribute('disabled', 'disabled')
+
+            let inputEstado = document.getElementById('estado')
+            inputEstado.value = dados.uf
+            inputEstado.setAttribute('disabled', 'disabled')
+
+            let inputRegiao = document.getElementById('regiao')
+            inputRegiao.value = dados.regiao
+            inputRegiao.setAttribute('disabled', 'disabled')
+        })
+    }
+}
+
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>
