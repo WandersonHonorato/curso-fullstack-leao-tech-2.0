@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
+
 <body>
-    
-<!-- <h1>Trabalhando com API's</h1>
+
+    <!-- <h1>Trabalhando com API's</h1>
 
 <button id="btncep" class="btn btn-secondary">Enviar</button>
 <input id="cep" type="text" placeholder="CEP"> -->
@@ -17,56 +20,87 @@
 </body>
 
 
-<div class="row ">
-    <div class="col-12">
+<div class="row ms-5 mt-5">
+    <div class="col-12 ms-3">
         <h1>Fake Store</h1>
     </div>
-    <div class="col-6">
-        <input type="text" class="form-control" placeholder="Digite o id do produto">
+    <div class="col-4">
+        <input id="product" type="text" class="form-control" placeholder="Digite o id do produto">
     </div>
     <div class="col-6">
-        <button class="btn btn-info">Verificar Produto</button>
+        <button onclick="buscarID()" class="btn btn-info">Verificar Produto</button>
+        <button onclick="limparCampo()" class="btn btn-warning" >Limpar Campo</button>
     </div>
-    <div>
-        
+    <div id="resultado" class="row mt-5">
+
     </div>
 
 </div>
 
+<script>
 
+    function buscarID() {
+        let InputId = document.getElementById('product')
+        let id = InputId.value
+        console.log(id)
+        let url = `https://fakestoreapi.com/products/${id}`
+        
+        fetch(url)
+            .then(resposta => resposta.json())
+            .then(dados => {
+                console.log(dados)
+                let resultado = document.getElementById('resultado')
+                resultado.innerHTML = `
+        <div class="card" style="width: 300px;">
+            <img src="${dados.image}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${dados.title}</h5>
+                <p class="card-text">${dados.description}</p>             
+ `});
+
+ 
+        function limparCampo() {
+            document.getElementById("limpar").value = "";
+
+        }
+    }
+
+
+
+</script>
 
 
 
 
 <script>
- 
-// let btncep = document.getElementById('btncep');
 
-// function enviarcep() {
-//     // 1. Pegamos o .value para ter os números do CEP
-//     let cep = document.getElementById('cep').value;
+    // let btncep = document.getElementById('btncep');
 
-//     // 2. Montamos a URL (certifique-se de que o CEP não tenha espaços ou traços se preferir)
-//     let url = `https://viacep.com.br/ws/${cep}/json/`;
+    // function enviarcep() {
+    //     // 1. Pegamos o .value para ter os números do CEP
+    //     let cep = document.getElementById('cep').value;
 
-//     // 3. Passamos a variável 'url' sem aspas/crases dentro do fetch
-//     fetch(url)
-//     .then((resposta) => {
-//         return resposta.json();
-//     })
-//     .then((dados) => {
-//         console.log(dados); // Agora os dados do endereço aparecerão aqui
-//     })
-//     .catch((erro) => {
-//         console.error("Erro na requisição:", erro);
-//     });
-// }
+    //     // 2. Montamos a URL (certifique-se de que o CEP não tenha espaços ou traços se preferir)
+    //     let url = `https://viacep.com.br/ws/${cep}/json/`;
 
-// // 4. Conectamos a função ao evento de clique do botão
-// btncep.addEventListener('click', enviarcep);
+    //     // 3. Passamos a variável 'url' sem aspas/crases dentro do fetch
+    //     fetch(url)
+    //     .then((resposta) => {
+    //         return resposta.json();
+    //     })
+    //     .then((dados) => {
+    //         console.log(dados); // Agora os dados do endereço aparecerão aqui
+    //     })
+    //     .catch((erro) => {
+    //         console.error("Erro na requisição:", erro);
+    //     });
+    // }
+
+    // // 4. Conectamos a função ao evento de clique do botão
+    // btncep.addEventListener('click', enviarcep);
 
 
-// --------------------------------------------------------
+    // --------------------------------------------------------
 
 
 
@@ -85,5 +119,8 @@
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
 </html>
