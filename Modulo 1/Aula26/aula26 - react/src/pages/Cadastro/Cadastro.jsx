@@ -13,6 +13,11 @@ const Cadastro = () => {
         console.log(valorDigitado)
     }
 
+    function verificarCep(valorDigitado) {
+        setCep(valorDigitado)
+        console.log(valorDigitado)
+    }
+
     return (
         <div className='container mt-5' style={{ minHeight: '100vh' }}>
             <h1>Cadastro de novo usuário</h1>
@@ -25,7 +30,7 @@ const Cadastro = () => {
                                 type='email'
                                 className='form-control'
                                 id='inputEmail4'
-                                onChange={(e) => setEmail(e.target.value)}
+                                onChange={(e) => filtrarEmail(e.target.value)}
                             />
                         </div>
                         <div className='col-md-6'>
