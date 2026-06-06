@@ -1,0 +1,130 @@
+const prompt = require('prompt-sync')()
+const { createClient } = require('@supabase/supabase-js')
+require('dotenv').config()
+
+const supabase = createClient(
+  process.env.SUPABASE_URL,
+  process.env.SUPABASE_KEY
+)
+
+
+
+// async function inserirLivro() {
+//   let name = prompt('Digite o nome do livro: ')
+//   let quantidade = parseInt(prompt('Digite a quantidade de livros: '))
+//   let genero = prompt('Digite o gênero do Livro: ') 
+//   let ano_publicacao = parseInt(prompt('Digite o ano de publicação do livro: '))
+//   let id_autor = parseInt(prompt('Digite o ID do autor do livro: '))    
+    
+//     let novoLivro = {
+//         name: name,
+//         quantidade: quantidade,
+//         genero: genero,
+//         ano_publicacao: ano_publicacao,
+//         id_autor: id_autor
+//     }
+
+//     const {data, error} = await supabase.from('biblioteca_livro').insert(novoLivro).select()
+    
+//     console.log(data)
+//     console.log(error)
+// }   
+// inserirLivro()
+
+// // --------------------------------------------------------------------------------------------------------------------------------
+
+// async function inserirAutor() {
+//   let name = prompt('Digite o nome do autor: ')
+//   let nacionalidade = prompt('Digite a nacionalidade do autor: ')
+//   let data_nascimento = prompt('Digite a data de nascimento do autor: ')
+
+//   let novoAutor = {
+//     name: name,
+//     nacionalidade: nacionalidade,
+//     data_nascimento: data_nascimento
+//   }
+
+//   const {data, error} = await supabase.from('biblioteca_autores').insert(novoAutor).select()
+
+//   console.log(data)
+//   console.log(error)
+// }
+// inserirAutor()
+
+// --------------------------------------------------------------------------------------------------------------------------------
+
+// async function NovoEmprestimo() {
+//     let id_usuario = parseInt(prompt('Digite o ID do usuário: '))   
+//     let id_livro = parseInt(prompt('Digite o ID do livro: '))
+//     let data_emprestimo = prompt('Digite a data do empréstimo: ')
+//     let data_devolucao = prompt('Digite a data de devolução: ')
+
+//     let novoEmprestimo = {
+//         id_usuario: id_usuario,
+//         id_livro: id_livro,
+//         data_emprestimo: data_emprestimo,
+//         data_devolucao: data_devolucao
+//     }   
+
+//     const {data, error} = await supabase.from('biblioteca_emprestimos').insert(novoEmprestimo).select()
+    
+//     console.log(data)
+//     console.log(error)
+// }
+// NovoEmprestimo()
+
+// -------------------------------------------------------------------------------------------------------------------------------- 
+
+// colocar o '*' para selecionar todas as colunas da tabela
+// async function listarLivros(name) {
+//     // para selecionar os campos da tabela relacionada, usar o nome da tabela e entre parênteses os campos desejados
+//     const {data, error} = await supabase.from('biblioteca_livro').select('name,genero, biblioteca_autores(name)').eq('name', name)
+
+//     console.log(data)
+//     console.log(error)
+
+//     if (error) {
+//         console.error('Erro ao listar os livros:', error)
+//         return
+//     }
+
+//     data.forEach(livro => {
+//         console.log('Título:', livro.name)
+//         console.log('Gênero:', livro.genero)
+//         console.log('------------------------')
+//     })
+// }
+// listarLivros('Romeu e Julieta')
+
+/*
+eq('campo', valor) - para filtrar os resultados com base em um valor específico
+neq('campo', valor) - para filtrar os resultados onde o valor do campo é diferente de um valor específico
+gt('campo', valor) - para filtrar os resultados onde o valor do campo é maior que um valor específico
+lt('campo', valor) - para filtrar os resultados onde o valor do campo é menor que um valor específico
+lte('campo', valor) - para filtrar os resultados onde o valor do campo é menor ou igual a um valor específico
+gte('campo', valor) - para filtrar os resultados onde o valor do campo é maior ou igual a um valor específico
+like('campo', '%valor%') - para filtrar os resultados onde o valor do campo contém um determinado padrão
+ilike('campo', '%valor%') - para filtrar os resultados onde o valor do campo contém um determinado padrão, ignorando maiúsculas e minúsculas
+in('campo', [valor1, valor2, ...]) - para filtrar os resultados onde o valor do campo está em uma lista de valores específicos
+order('campo', { ascending: true }) - para ordenar os resultados com base em um campo específico, em ordem crescente
+limit(n) - para limitar o número de resultados retornados a n
+*/
+
+async function atualizarAutor(id) {
+    let name = prompt('Digite o novo nome: ')
+    let nacionalidade = prompt('Digite a nova nacionalidade: ')
+    let atualizacao = {
+        name: name,
+        nacionalidade: nacionalidade
+    }
+
+    const { data, error } = await supabase.from('biblioteca_autores').update(atualizacao).eq('id', id).select()
+    if (error) {
+        console.error('Erro ao atualizar o autor:', error)
+        return
+    }
+
+    console.log(data)
+    console.log(error)
+}
+atualizarAutor(1)
