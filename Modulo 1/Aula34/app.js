@@ -151,45 +151,49 @@ async function cadastrarUsuario() {
         tipo: tipo,
         senha: senhaCrip
     }
-
     const {data, error} = await supabase.from('biblioteca_usuarios').insert(novoUsuario).select()
+    console.log(data)
     error ? console.log(error) : console.log('Dados inseridos com sucesso!')
+
     }
 
     async function logarSistema() {
         console.log('Faça login para acessar o sistema')
         console.log ('-----------------------------')
-        let cpf = prompt('Digite o CPF: ')
-        let senha = prompt('Digite a senha: ')
+        const cpf = prompt('Digite o CPF: ')
+        const senha = prompt('Digite a senha: ')
 
         const {data, error} = await supabase.from('biblioteca_usuarios').select('*').eq('cpf', cpf)
-
         if (error) {
             console.error('Erro ao buscar o usuário:', error)
             return
         }
-
-
-        const senhaCorreta = await bcrypt.compare(senha, data[0].senha)
-        console.log('Resposta', data)
-        console.log('Senha correta', senhaCorreta)
+        if (data.length > 0) {
+            const senhaCorreta = await bcrypt.compare(senha, data[0].senha)
+            if (senhaCorreta) {
+                return data[0]
+            } else {  
+                console.log('CPF não encontrado')
+                return false
+            }
+        }
     }
 
     async function menu() {
         console.log('=========== MENU ===========')
         console.log('1 - Cadastrar Usuário')
         console.log('2 - Logar no Sistema')
-     
+
+        console.log('0 - sair')
         let opcao = prompt('Digite a opção desejada: ')
-        console.log('Opção escolhida:', opcao)
 
         while (opcao != '0'){
         switch (opcao) {    
             case '1':
-                cadastrarUsuario()
+                await cadastrarUsuario()
                 break
             case '2':
-                logarSistema()
+                await logarSistema()
                 break
             default:
                 break;
