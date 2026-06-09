@@ -1,13 +1,15 @@
 const prompt = require('prompt-sync')()
 const { createClient } = require('@supabase/supabase-js')
+const bcrypt = require('bcrypt')
 require('dotenv').config()
+
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_KEY
 )
 
-
+// npm i bcrypt
 
 // async function inserirLivro() {
 //   let name = prompt('Digite o nome do livro: ')
@@ -110,21 +112,97 @@ order('campo', { ascending: true }) - para ordenar os resultados com base em um 
 limit(n) - para limitar o número de resultados retornados a n
 */
 
-async function atualizarAutor(id) {
-    let name = prompt('Digite o novo nome: ')
-    let nacionalidade = prompt('Digite a nova nacionalidade: ')
-    let atualizacao = {
-        name: name,
-        nacionalidade: nacionalidade
+// async function atualizarAutor(id) {
+//     let name = prompt('Digite o novo nome: ')
+//     let nacionalidade = prompt('Digite a nova nacionalidade: ')
+//     let atualizacao = {
+//         name: name,
+//         nacionalidade: nacionalidade
+//     }
+
+//     const { data, error } = await supabase.from('biblioteca_autores').update(atualizacao).eq('id', id).select()
+//     if (error) {
+//         console.error('Erro ao atualizar o autor:', error)
+//         return
+//     }
+
+//     console.log(data)
+//     console.log(error)
+// }
+// atualizarAutor(1)
+
+// --------------------------------------------------------------------------------------------------------------------------------
+
+async function cadastrarUsuario() {
+    let name = prompt('Digite o nome: ')
+    let cpf = prompt('Digite o CPF: ')
+    let phone = prompt('Digite o telefone: ')
+    let endereço = prompt('Digite o endereço: ')
+    let tipo = prompt('Digite o tipo de usuário: ')
+    let senha = prompt('Digite a senha: ')
+
+    const saltRounds = 10
+    const senhaCrip = await bcrypt.hash(senha, saltRounds)
+    let novoUsuario = {
+        name:name,
+        cpf: cpf,
+        phone: phone,
+        endereço: endereço,
+        tipo: tipo,
+        senha: senhaCrip
     }
 
-    const { data, error } = await supabase.from('biblioteca_autores').update(atualizacao).eq('id', id).select()
-    if (error) {
-        console.error('Erro ao atualizar o autor:', error)
-        return
+    const {data, error} = await supabase.from('biblioteca_usuarios').insert(novoUsuario).select()
+    error ? console.log(error) : console.log('Dados inseridos com sucesso!')
     }
 
-    console.log(data)
-    console.log(error)
+    async function logarSistema() {
+        console.log('Faça login para acessar o sistema')
+        console.log ('-----------------------------')
+        let cpf = prompt('Digite o CPF: ')
+        let senha = prompt('Digite a senha: ')
+
+        const {data, error} = await supabase.from('biblioteca_usuarios').select('*').eq('cpf', cpf)
+
+        if (error) {
+            console.error('Erro ao buscar o usuário:', error)
+            return
+        }
+
+
+        const senhaCorreta = await bcrypt.compare(senha, data[0].senha)
+        console.log('Resposta', data)
+        console.log('Senha correta', senhaCorreta)
+    }
+
+    async function menu() {
+        console.log('=========== MENU ===========')
+        console.log('1 - Cadastrar Usuário')
+        console.log('2 - Logar no Sistema')
+     
+        let opcao = prompt('Digite a opção desejada: ')
+        console.log('Opção escolhida:', opcao)
+
+        while (opcao != '0'){
+        switch (opcao) {    
+            case '1':
+                cadastrarUsuario()
+                break
+            case '2':
+                logarSistema()
+                break
+            default:
+                break;
+        } 
+        console.log('=========== MENU ===========')
+        console.log('1 - Cadastrar Usuário')
+        console.log('2 - Logar no Sistema')
+
+        console.log('0 - sair')
+        opcao = prompt('Digite a opção desejada: ')
+    }   
 }
-atualizarAutor(1)
+ menu()
+
+            
+

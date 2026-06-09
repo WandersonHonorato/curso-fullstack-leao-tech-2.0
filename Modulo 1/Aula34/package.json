@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "@supabase/supabase-js": "^2.107.0",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
     "prompt-sync": "^4.2.0"
   }
