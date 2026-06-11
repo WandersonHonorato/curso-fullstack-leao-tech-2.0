@@ -2,7 +2,9 @@ const prompt = require('prompt-sync')()
 const { createClient } = require('@supabase/supabase-js')
 const bcrypt = require('bcrypt')
 require('dotenv').config()
+const express = require('express')
 
+const app = express()
 
 const supabase = createClient(
   process.env.SUPABASE_URL,
@@ -33,25 +35,21 @@ async function inserirLivro() {
 }   
 // inserirLivro()
 
-// // --------------------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------------------
 
-async function inserirAutor() {
-  let name = prompt('Digite o nome do autor: ')
-  let nacionalidade = prompt('Digite a nacionalidade do autor: ')
-  let data_nascimento = prompt('Digite a data de nascimento do autor: ')
+// endpoint para listar os livros, usando o método GET do express
+app.get('/listarlivros', async (req, res) =>{
+    const {data, error} = await supabase.from('biblioteca_livro').select('name, genero, biblioteca_autores(name,nacionalidade)')
+    
+    if (error) {
+        console.error('Erro ao listar os livros:', error)
+        res.status(500).json({ error: 'Erro ao listar os livros' })
+        return
+    }
+    console.log(data)
+    res.json(data)
+})
 
-  let novoAutor = {
-    name: name,
-    nacionalidade: nacionalidade,
-    data_nascimento: data_nascimento
-  }
-
-  const {data, error} = await supabase.from('biblioteca_autores').insert(novoAutor).select()
-
-  console.log(data)
-  console.log(error)
-}
-// inserirAutor()
 
 // --------------------------------------------------------------------------------------------------------------------------------
 
@@ -239,4 +237,9 @@ async function cadastrarUsuario() {
         opcao = prompt('Escolha uma opção: ')
     }
 }
-menu()
+// menu()
+
+
+app.listen(3000, () => {
+    console.log('Olá Mundo!')
+})
