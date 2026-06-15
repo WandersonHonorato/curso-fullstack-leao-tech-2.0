@@ -1,7 +1,7 @@
 import { createClient } from '@supabase/supabase-js'
 import readline from 'readline'
-import 'dotenv/config'
-
+import dotenv from 'dotenv'
+dotenv.config()
 
 const SUPABASE_URL = process.env.SUPABASE_URL
 const SUPABASE_KEY = process.env.SUPABASE_KEY
@@ -329,7 +329,7 @@ function exibirMenu() {
   console.log('╠════════════════════════════════════════╣')
   console.log('║                CONTAS                  ║')
   console.log('║   6 - Cadastrar conta                  ║')
-  console.log('║   7 - Listar contas (com cliente)      ║')
+  console.log('║   7 - Listar contas                    ║')
   console.log('╠════════════════════════════════════════╣')
   console.log('║              TRANSAÇÕES                ║')
   console.log('║   8 - Registrar transação              ║')
