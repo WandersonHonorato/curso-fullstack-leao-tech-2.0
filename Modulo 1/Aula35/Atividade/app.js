@@ -1,11 +1,23 @@
-import { createClient } from '@supabase/supabase-js'
-import readline from 'readline'
-import dotenv from 'dotenv'
-dotenv.config()
+const prompt = require('prompt-sync')()
+const { createClient } = require('@supabase/supabase-js')
+const bcrypt = require('bcrypt')
+require('dotenv').config()
+
+const express = require('express')
+const app = express()
+app.use(cors())
+app.use(express.json())
+
+
+const jwt = require('jsonwebtoken')
+const JWT_SENHA=process.env.JWT_SENHA
+
+const cors =require('cors')
 
 const SUPABASE_URL = process.env.SUPABASE_URL
 const SUPABASE_KEY = process.env.SUPABASE_KEY
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+
 
 // ----- INPUT ---------------------------------------------------------------
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
