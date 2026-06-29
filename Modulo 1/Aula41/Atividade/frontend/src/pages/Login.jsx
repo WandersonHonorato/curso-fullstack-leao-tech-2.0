@@ -16,7 +16,6 @@ export default function Login() {
   const [carregando, setCarregando] = useState(false);
   const [avisoCadastro, setAvisoCadastro] = useState('');
 
-  // Se já autenticado, redirecionar
   if (isAuthenticated) {
     return <Navigate to={usuario?.tipo === 'funcionario' ? '/funcionario' : '/cliente'} replace />;
   }

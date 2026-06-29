@@ -33,7 +33,7 @@ const cadastrarServico = async (req, res) => {
   }
 };
 
-// GET /servicos - listar serviços disponíveis (todos autenticados)
+// GET servicos - listar serviços disponíveis (todos autenticados)
 const listarServicos = async (req, res) => {
   try {
     const { data, error } = await supabase
@@ -50,7 +50,7 @@ const listarServicos = async (req, res) => {
   }
 };
 
-// GET /servicos/todos - listar todos incluindo inativos (funcionário)
+// GET servicos - listar todos incluindo inativos (funcionário)
 const listarTodosServicos = async (req, res) => {
   try {
     const { data, error } = await supabase
@@ -96,9 +96,6 @@ const atualizarServico = async (req, res) => {
 };
 
 // POST /servicos/:id/adquirir - cliente contrata um serviço
-// Observação: o diagrama original (banco_contratacoes) não tem conta_id,
-// então o débito da taxa é registrado em banco_transacoes (que sim tem
-// conta_id) e a contratação em si fica em banco_contratacoes.
 const adquirirServico = async (req, res) => {
   try {
     const { id: servico_id } = req.params;

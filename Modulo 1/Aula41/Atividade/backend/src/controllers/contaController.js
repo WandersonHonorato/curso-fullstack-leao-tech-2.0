@@ -6,7 +6,7 @@ const gerarNumeroConta = () => {
   return `${num}-${Math.floor(Math.random() * 9)}`;
 };
 
-// POST /contas - cadastrar conta (funcionário)
+// POST /contas - cadastrar conta
 const cadastrarConta = async (req, res) => {
   try {
     const { cliente_id, tipo_conta, saldo_inicial } = req.body;
