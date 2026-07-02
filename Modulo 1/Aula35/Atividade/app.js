@@ -1,7 +1,8 @@
 const prompt = require('prompt-sync')()
 const { createClient } = require('@supabase/supabase-js')
 const bcrypt = require('bcrypt')
-require('dotenv').config()
+import dotenv from 'dotenv';
+dotenv.config();
 
 const express = require('express')
 const app = express()
